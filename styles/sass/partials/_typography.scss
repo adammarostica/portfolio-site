@@ -1,0 +1,14 @@
+html {
+  font-size: 125%;
+  text-rendering: optimizeLegibility;
+  font-family: $josefin;
+  letter-spacing: -1.9px;
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}

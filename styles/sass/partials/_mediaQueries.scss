@@ -1,0 +1,13 @@
+@media (min-width: 500px) {
+  .intro {
+    flex-direction: row;
+    align-items: flex-end;
+    &__name {
+      font-size: clamp(2.5rem, 15vw, 8rem);
+    }
+    &__text {
+      text-align: right;
+      margin-bottom: 5vw;
+    }
+  }
+}
