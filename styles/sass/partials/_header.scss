@@ -4,6 +4,7 @@ header {
   display: flex;
   align-items: center;
   .wrapper {
+    width: 70%;
     max-width: 800px;
   }
 }
@@ -17,6 +18,7 @@ header {
     position: relative;
     flex-basis: 70%;
     margin-bottom: 8vw;
+    border-radius: 50%;
   }
   &__image {
     animation: .7s grow ease-out forwards;
@@ -31,27 +33,64 @@ header {
     z-index: 1;
     // text-shadow: 3px 3px #E450EE;
     &__A1 {
+      --x: 35deg;
+      --y: -10deg;
+      display: block;
       transform: scale(0);
       left: -5%;
-      animation: .3s grow .5s ease-out forwards; 
+      animation: .3s grow .5s ease-out forwards;
+      text-shadow: 1px 1px #EB7FF3,
+                  2px 2px #EB7FF3,
+                  3px 3px #EB7FF3,
+                  4px 4px #EB7FF3,
+                  5px 5px #EB7FF3,
+                  6px 6px #EB7FF3,
+                  7px 7px #EB7FF3;
     }
     &__D {
+      --x: -20deg;
+      --y: -30deg;
       right: -10%;
       top: 20%;
       transform: scale(0);
       animation: .3s grow .7s ease-out forwards;
+      text-shadow: -1px 1px #EB7FF3,
+                  -2px 2px #EB7FF3,
+                  -3px 3px #EB7FF3,
+                  -4px 4px #EB7FF3,
+                  -5px 5px #EB7FF3,
+                  -6px 6px #EB7FF3,
+                  -7px 7px #EB7FF3;
     }
     &__A2 {
+      --x: -35deg;
+      --y: -20deg;
       bottom: 10%;
       left: 5%;
       transform: scale(0);
       animation: .3s grow .9s ease-out forwards;
+      text-shadow: 1px -1px #EB7FF3,
+                2px -2px #EB7FF3,
+                3px -3px #EB7FF3,
+                4px -4px #EB7FF3,
+                5px -5px #EB7FF3,
+                6px -6px #EB7FF3,
+                7px -7px #EB7FF3;
     }
     &__M {
+      --x: 30deg;
+      --y: -20deg;
       bottom: -10%;
       right: 10%;
       transform: scale(0);
       animation: .3s grow 1.1s ease-out forwards;
+      text-shadow: -1px -1px #EB7FF3,
+                  -2px -2px #EB7FF3,
+                  -3px -3px #EB7FF3,
+                  -4px -4px #EB7FF3,
+                  -5px -5px #EB7FF3,
+                  -6px -6px #EB7FF3,
+                  -7px -7px #EB7FF3;
     }
   }
   &__text {
@@ -75,7 +114,7 @@ header {
   }
 
   to {
-    transform: scale(1);
+    transform: scale(1) rotateX(var(--x)) rotateY(var(--y));
     opacity: 1;
   }
 }
