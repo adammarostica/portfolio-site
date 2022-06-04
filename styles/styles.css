@@ -309,8 +309,8 @@ header .wrapper {
   --x: 35deg;
   --y: -10deg;
   display: block;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
   left: -5%;
   -webkit-animation: 0.3s grow 1s ease-out forwards;
           animation: 0.3s grow 1s ease-out forwards;
@@ -321,8 +321,8 @@ header .wrapper {
   --y: -30deg;
   right: -10%;
   top: 20%;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
   -webkit-animation: 0.3s grow 1.2s ease-out forwards;
           animation: 0.3s grow 1.2s ease-out forwards;
   text-shadow: -1px 1px #EB7FF3, -2px 2px #EB7FF3, -3px 3px #EB7FF3, -4px 4px #EB7FF3, -5px 5px #EB7FF3, -6px 6px #EB7FF3, -7px 7px #EB7FF3;
@@ -332,8 +332,8 @@ header .wrapper {
   --y: -20deg;
   bottom: 10%;
   left: 5%;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
   -webkit-animation: 0.3s grow 1.4s ease-out forwards;
           animation: 0.3s grow 1.4s ease-out forwards;
   text-shadow: 1px -1px #EB7FF3, 2px -2px #EB7FF3, 3px -3px #EB7FF3, 4px -4px #EB7FF3, 5px -5px #EB7FF3, 6px -6px #EB7FF3, 7px -7px #EB7FF3;
@@ -343,8 +343,8 @@ header .wrapper {
   --y: -20deg;
   bottom: -10%;
   right: 10%;
-  -webkit-transform: scale(0);
-          transform: scale(0);
+  -webkit-transform: scale(0, 0);
+          transform: scale(0, 0);
   -webkit-animation: 0.3s grow 1.6s ease-out forwards;
           animation: 0.3s grow 1.6s ease-out forwards;
   text-shadow: -1px -1px #EB7FF3, -2px -2px #EB7FF3, -3px -3px #EB7FF3, -4px -4px #EB7FF3, -5px -5px #EB7FF3, -6px -6px #EB7FF3, -7px -7px #EB7FF3;
@@ -371,8 +371,8 @@ header .wrapper {
             transform: scale(0);
   }
   to {
-    -webkit-transform: scale(1) rotateX(var(--x)) rotateY(var(--y));
-            transform: scale(1) rotateX(var(--x)) rotateY(var(--y));
+    -webkit-transform: scale(1, 1) rotateX(var(--x)) rotateY(var(--y));
+            transform: scale(1, 1) rotateX(var(--x)) rotateY(var(--y));
     opacity: 1;
   }
 }
@@ -383,8 +383,8 @@ header .wrapper {
             transform: scale(0);
   }
   to {
-    -webkit-transform: scale(1) rotateX(var(--x)) rotateY(var(--y));
-            transform: scale(1) rotateX(var(--x)) rotateY(var(--y));
+    -webkit-transform: scale(1, 1) rotateX(var(--x)) rotateY(var(--y));
+            transform: scale(1, 1) rotateX(var(--x)) rotateY(var(--y));
     opacity: 1;
   }
 }

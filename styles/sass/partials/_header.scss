@@ -36,7 +36,7 @@ header {
       --x: 35deg;
       --y: -10deg;
       display: block;
-      transform: scale(0);
+      transform: scale(0, 0);
       left: -5%;
       animation: .3s grow 1s ease-out forwards;
       text-shadow: 1px 1px #EB7FF3,
@@ -52,7 +52,7 @@ header {
       --y: -30deg;
       right: -10%;
       top: 20%;
-      transform: scale(0);
+      transform: scale(0, 0);
       animation: .3s grow 1.2s ease-out forwards;
       text-shadow: -1px 1px #EB7FF3,
                   -2px 2px #EB7FF3,
@@ -67,7 +67,7 @@ header {
       --y: -20deg;
       bottom: 10%;
       left: 5%;
-      transform: scale(0);
+      transform: scale(0, 0);
       animation: .3s grow 1.4s ease-out forwards;
       text-shadow: 1px -1px #EB7FF3,
                 2px -2px #EB7FF3,
@@ -82,7 +82,7 @@ header {
       --y: -20deg;
       bottom: -10%;
       right: 10%;
-      transform: scale(0);
+      transform: scale(0, 0);
       animation: .3s grow 1.6s ease-out forwards;
       text-shadow: -1px -1px #EB7FF3,
                   -2px -2px #EB7FF3,
@@ -114,7 +114,7 @@ header {
   }
 
   to {
-    transform: scale(1) rotateX(var(--x)) rotateY(var(--y));
+    transform: scale(1, 1) rotateX(var(--x)) rotateY(var(--y));
     opacity: 1;
   }
 }
