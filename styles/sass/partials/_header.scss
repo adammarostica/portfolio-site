@@ -38,7 +38,7 @@ header {
       display: block;
       transform: scale(0, 0);
       left: -5%;
-      animation: .3s grow 1s ease-out forwards;
+      animation: .5s grow 1s ease-out forwards;
       text-shadow: 1px 1px #EB7FF3,
                   2px 2px #EB7FF3,
                   3px 3px #EB7FF3,
@@ -53,7 +53,7 @@ header {
       right: -10%;
       top: 20%;
       transform: scale(0, 0);
-      animation: .3s grow 1.2s ease-out forwards;
+      animation: .5s grow 1.2s ease-out forwards;
       text-shadow: -1px 1px #EB7FF3,
                   -2px 2px #EB7FF3,
                   -3px 3px #EB7FF3,
@@ -68,7 +68,7 @@ header {
       bottom: 10%;
       left: 5%;
       transform: scale(0, 0);
-      animation: .3s grow 1.4s ease-out forwards;
+      animation: .5s grow 1.4s ease-out forwards;
       text-shadow: 1px -1px #EB7FF3,
                 2px -2px #EB7FF3,
                 3px -3px #EB7FF3,
@@ -83,7 +83,7 @@ header {
       bottom: -10%;
       right: 10%;
       transform: scale(0, 0);
-      animation: .3s grow 1.6s ease-out forwards;
+      animation: .5s grow 1.6s ease-out forwards;
       text-shadow: -1px -1px #EB7FF3,
                   -2px -2px #EB7FF3,
                   -3px -3px #EB7FF3,
@@ -98,7 +98,7 @@ header {
     opacity: 0;
     color: white;
     text-align: center;
-    animation: 1s slide-right 1.8s ease-out forwards;
+    animation: 1s slide-right 2s ease-out forwards;
     p {
       color: #f09df6;
     }
@@ -111,17 +111,19 @@ header {
 @keyframes grow {
   from {
     transform: scale(0, 0);
+    scale: 0;
   }
 
   to {
     transform: scale(1, 1) rotateX(var(--x)) rotateY(var(--y));
+    scale: 1;
     opacity: 1;
   }
 }
 
 @keyframes slide-right {
   from {
-    transform: translate(-3rem);
+    transform: translate(-2rem);
   }
 
   to {

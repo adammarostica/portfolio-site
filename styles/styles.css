@@ -312,8 +312,8 @@ header .wrapper {
   -webkit-transform: scale(0, 0);
           transform: scale(0, 0);
   left: -5%;
-  -webkit-animation: 0.3s grow 1s ease-out forwards;
-          animation: 0.3s grow 1s ease-out forwards;
+  -webkit-animation: 0.5s grow 1s ease-out forwards;
+          animation: 0.5s grow 1s ease-out forwards;
   text-shadow: 1px 1px #EB7FF3, 2px 2px #EB7FF3, 3px 3px #EB7FF3, 4px 4px #EB7FF3, 5px 5px #EB7FF3, 6px 6px #EB7FF3, 7px 7px #EB7FF3;
 }
 .intro__name__D {
@@ -323,8 +323,8 @@ header .wrapper {
   top: 20%;
   -webkit-transform: scale(0, 0);
           transform: scale(0, 0);
-  -webkit-animation: 0.3s grow 1.2s ease-out forwards;
-          animation: 0.3s grow 1.2s ease-out forwards;
+  -webkit-animation: 0.5s grow 1.2s ease-out forwards;
+          animation: 0.5s grow 1.2s ease-out forwards;
   text-shadow: -1px 1px #EB7FF3, -2px 2px #EB7FF3, -3px 3px #EB7FF3, -4px 4px #EB7FF3, -5px 5px #EB7FF3, -6px 6px #EB7FF3, -7px 7px #EB7FF3;
 }
 .intro__name__A2 {
@@ -334,8 +334,8 @@ header .wrapper {
   left: 5%;
   -webkit-transform: scale(0, 0);
           transform: scale(0, 0);
-  -webkit-animation: 0.3s grow 1.4s ease-out forwards;
-          animation: 0.3s grow 1.4s ease-out forwards;
+  -webkit-animation: 0.5s grow 1.4s ease-out forwards;
+          animation: 0.5s grow 1.4s ease-out forwards;
   text-shadow: 1px -1px #EB7FF3, 2px -2px #EB7FF3, 3px -3px #EB7FF3, 4px -4px #EB7FF3, 5px -5px #EB7FF3, 6px -6px #EB7FF3, 7px -7px #EB7FF3;
 }
 .intro__name__M {
@@ -345,8 +345,8 @@ header .wrapper {
   right: 10%;
   -webkit-transform: scale(0, 0);
           transform: scale(0, 0);
-  -webkit-animation: 0.3s grow 1.6s ease-out forwards;
-          animation: 0.3s grow 1.6s ease-out forwards;
+  -webkit-animation: 0.5s grow 1.6s ease-out forwards;
+          animation: 0.5s grow 1.6s ease-out forwards;
   text-shadow: -1px -1px #EB7FF3, -2px -2px #EB7FF3, -3px -3px #EB7FF3, -4px -4px #EB7FF3, -5px -5px #EB7FF3, -6px -6px #EB7FF3, -7px -7px #EB7FF3;
 }
 .intro__text {
@@ -355,8 +355,8 @@ header .wrapper {
   opacity: 0;
   color: white;
   text-align: center;
-  -webkit-animation: 1s slide-right 1.8s ease-out forwards;
-          animation: 1s slide-right 1.8s ease-out forwards;
+  -webkit-animation: 1s slide-right 2s ease-out forwards;
+          animation: 1s slide-right 2s ease-out forwards;
 }
 .intro__text p {
   color: #f09df6;
@@ -369,10 +369,12 @@ header .wrapper {
   from {
     -webkit-transform: scale(0, 0);
             transform: scale(0, 0);
+    scale: 0;
   }
   to {
     -webkit-transform: scale(1, 1) rotateX(var(--x)) rotateY(var(--y));
             transform: scale(1, 1) rotateX(var(--x)) rotateY(var(--y));
+    scale: 1;
     opacity: 1;
   }
 }
@@ -381,17 +383,19 @@ header .wrapper {
   from {
     -webkit-transform: scale(0, 0);
             transform: scale(0, 0);
+    scale: 0;
   }
   to {
     -webkit-transform: scale(1, 1) rotateX(var(--x)) rotateY(var(--y));
             transform: scale(1, 1) rotateX(var(--x)) rotateY(var(--y));
+    scale: 1;
     opacity: 1;
   }
 }
 @-webkit-keyframes slide-right {
   from {
-    -webkit-transform: translate(-3rem);
-            transform: translate(-3rem);
+    -webkit-transform: translate(-2rem);
+            transform: translate(-2rem);
   }
   to {
     -webkit-transform: translate(0);
@@ -401,8 +405,8 @@ header .wrapper {
 }
 @keyframes slide-right {
   from {
-    -webkit-transform: translate(-3rem);
-            transform: translate(-3rem);
+    -webkit-transform: translate(-2rem);
+            transform: translate(-2rem);
   }
   to {
     -webkit-transform: translate(0);
