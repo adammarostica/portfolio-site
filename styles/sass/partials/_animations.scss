@@ -16,10 +16,12 @@
   @keyframes grow {
     from {
       transform: scale(0, 0);
+      scale: 0
     }
     
     to {
       transform: scale(1, 1) rotateX(var(--x)) rotateY(var(--y));
+      scale: 1;
       opacity: 1;
     }
   }
