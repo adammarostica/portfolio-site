@@ -35,7 +35,7 @@ header {
     &__A1 {
       --x: 35deg;
       --y: -10deg;
-      transform: scale(0);
+      transform: scale(0, 0);
       left: -5%;
       animation: .5s grow 1s ease-out forwards;
       text-shadow: 1px 1px $lavenderMagenta,
@@ -51,7 +51,7 @@ header {
       --y: -30deg;
       right: -10%;
       top: 20%;
-      transform: scale(0);
+      transform: scale(0, 0);
       animation: .5s grow 1.2s ease-out forwards;
       text-shadow: -1px 1px $lavenderMagenta,
                   -2px 2px $lavenderMagenta,
@@ -66,7 +66,7 @@ header {
       --y: -20deg;
       bottom: 10%;
       left: 5%;
-      transform: scale(0);
+      transform: scale(0, 0);
       animation: .5s grow 1.4s ease-out forwards;
       text-shadow: 1px -1px $lavenderMagenta,
                 2px -2px $lavenderMagenta,

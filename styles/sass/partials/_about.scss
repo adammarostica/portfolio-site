@@ -3,6 +3,7 @@ main {
 }
 
 .about {
+  overflow: scroll;
   display: flex;
   position: relative;
   flex-direction: column;
