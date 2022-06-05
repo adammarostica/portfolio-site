@@ -1,0 +1,70 @@
+@supports (translate: 0) {
+  @keyframes grow {
+    from {
+      scale: 0;
+    }
+  
+    to {
+      transform: rotateX(var(--x)) rotateY(var(--y));
+      scale: 1;
+      opacity: 1;
+    }
+  }  
+}
+
+@supports not (translate: 0) {
+  @keyframes grow {
+    from {
+      transform: scale(0);
+    }
+    
+    to {
+      transform: scale(1) rotateX(var(--x)) rotateY(var(--y));
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-2rem);
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(1rem);
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-to-black {
+  from {
+    background-size: 100% 100%;
+  }
+
+  to {
+    background-size: 0 100%;
+  }
+}
+
+// @keyframes a-up {
+//   from {
+//     opacity: 1;
+//     transform: scale(1);
+//     transform: rotateX(var(--x)) rotateY(var(--y));
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateY(-50rem);
+//   }
+// }

@@ -28,3 +28,14 @@
 
   @return $shadows;
 }
+
+@function long-shadow($x, $y, $color) {
+  $shadows: ();
+  @for $i from 1 through $x {
+    $shadowX: (($i * $x / Math.abs($x)) * 1px);
+    $shadowY: (($i * $x / Math.abs($y)) * 1px);
+    $shadows: append($shadowX $shadowY $color, $separator: comma);
+    @debug $shadows;
+  }
+  @return $shadows;
+}

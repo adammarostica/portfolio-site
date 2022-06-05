@@ -1,5 +1,5 @@
 header {
-  background-image: linear-gradient(#5112b0, #8b52e0);
+  background-image: linear-gradient(#66136C, #3C2189);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -28,54 +28,53 @@ header {
     font-family: $bowlby;
     font-size: clamp(2.5rem, 21vw, 8rem);
     line-height: 1;
-    color: #DC28E9;
+    color: $steelPink;
     position: absolute;
     z-index: 1;
     // text-shadow: 3px 3px #E450EE;
     &__A1 {
       --x: 35deg;
       --y: -10deg;
-      display: block;
-      transform: scale(0, 0);
+      transform: scale(0);
       left: -5%;
       animation: .5s grow 1s ease-out forwards;
-      text-shadow: 1px 1px #EB7FF3,
-                  2px 2px #EB7FF3,
-                  3px 3px #EB7FF3,
-                  4px 4px #EB7FF3,
-                  5px 5px #EB7FF3,
-                  6px 6px #EB7FF3,
-                  7px 7px #EB7FF3;
+      text-shadow: 1px 1px $lavenderMagenta,
+                  2px 2px $lavenderMagenta,
+                  3px 3px $lavenderMagenta,
+                  4px 4px $lavenderMagenta,
+                  5px 5px $lavenderMagenta,
+                  6px 6px $lavenderMagenta,
+                  7px 7px $lavenderMagenta;
     }
     &__D {
       --x: -20deg;
       --y: -30deg;
       right: -10%;
       top: 20%;
-      transform: scale(0, 0);
+      transform: scale(0);
       animation: .5s grow 1.2s ease-out forwards;
-      text-shadow: -1px 1px #EB7FF3,
-                  -2px 2px #EB7FF3,
-                  -3px 3px #EB7FF3,
-                  -4px 4px #EB7FF3,
-                  -5px 5px #EB7FF3,
-                  -6px 6px #EB7FF3,
-                  -7px 7px #EB7FF3;
+      text-shadow: -1px 1px $lavenderMagenta,
+                  -2px 2px $lavenderMagenta,
+                  -3px 3px $lavenderMagenta,
+                  -4px 4px $lavenderMagenta,
+                  -5px 5px $lavenderMagenta,
+                  -6px 6px $lavenderMagenta,
+                  -7px 7px $lavenderMagenta;
     }
     &__A2 {
       --x: -35deg;
       --y: -20deg;
       bottom: 10%;
       left: 5%;
-      transform: scale(0, 0);
+      transform: scale(0);
       animation: .5s grow 1.4s ease-out forwards;
-      text-shadow: 1px -1px #EB7FF3,
-                2px -2px #EB7FF3,
-                3px -3px #EB7FF3,
-                4px -4px #EB7FF3,
-                5px -5px #EB7FF3,
-                6px -6px #EB7FF3,
-                7px -7px #EB7FF3;
+      text-shadow: 1px -1px $lavenderMagenta,
+                2px -2px $lavenderMagenta,
+                3px -3px $lavenderMagenta,
+                4px -4px $lavenderMagenta,
+                5px -5px $lavenderMagenta,
+                6px -6px $lavenderMagenta,
+                7px -7px $lavenderMagenta;
     }
     &__M {
       --x: 30deg;
@@ -84,50 +83,40 @@ header {
       right: 10%;
       transform: scale(0, 0);
       animation: .5s grow 1.6s ease-out forwards;
-      text-shadow: -1px -1px #EB7FF3,
-                  -2px -2px #EB7FF3,
-                  -3px -3px #EB7FF3,
-                  -4px -4px #EB7FF3,
-                  -5px -5px #EB7FF3,
-                  -6px -6px #EB7FF3,
-                  -7px -7px #EB7FF3;
+      text-shadow: -1px -1px $lavenderMagenta,
+                  -2px -2px $lavenderMagenta,
+                  -3px -3px $lavenderMagenta,
+                  -4px -4px $lavenderMagenta,
+                  -5px -5px $lavenderMagenta,
+                  -6px -6px $lavenderMagenta,
+                  -7px -7px $lavenderMagenta;
     }
   }
   &__text {
+    margin-top: 1rem;
     flex-basis: 30%;
-    opacity: 0;
     color: white;
     text-align: center;
-    animation: 1s slide-right 2s ease-out forwards;
+    letter-spacing: -2px;
+    h1 {
+      opacity: 0;
+      animation: 1s slide-right 2s ease-out forwards;
+    }
     p {
-      color: #f09df6;
+      opacity: 0;
+      margin-top: clamp(.5rem, 1.5vw, 1.5rem);
+      color: #F5C4F9;
+      animation: .7s slide-up 2.3s ease-out forwards;
     }
     span {
-      display: block;
+      display: unset;
     }
   }
 }
 
-@keyframes grow {
-  from {
-    transform: scale(0, 0);
-    scale: 0;
-  }
-
-  to {
-    transform: scale(1, 1) rotateX(var(--x)) rotateY(var(--y));
-    scale: 1;
-    opacity: 1;
-  }
-}
-
-@keyframes slide-right {
-  from {
-    transform: translate(-2rem);
-  }
-
-  to {
-    transform: translate(0);
-    opacity: 1;
-  }
-}
+// .intro__name.slide__A {
+//   animation: 1s a-up linear forwards;
+//   animation-iteration-count: 1;
+//   animation-play-state: paused;
+//   animation-delay: calc(var(--scroll) * -1s);
+// }

@@ -22,6 +22,9 @@
     &__text {
       text-align: right;
       margin-bottom: 5vw;
+      span {
+        display: block;
+      }
     }
   }
 }
