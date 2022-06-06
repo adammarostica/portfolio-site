@@ -465,7 +465,7 @@ header .wrapper {
 }
 
 .about {
-  height: 200vh;
+  height: 300vh;
   background: #292a32;
   background-size: 50% 50%;
   min-height: 100vh;
@@ -473,6 +473,7 @@ header .wrapper {
           animation: 10s fade-to-black linear forwards;
 }
 .about .wrapper {
+  width: 100%;
   position: sticky;
   top: 0;
   height: 100vh;
