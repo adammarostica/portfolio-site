@@ -20,7 +20,7 @@
     }
     
     to {
-      transform: scale(1, 1) rotateX(var(--x)) rotateY(var(--y));
+      transform: scale(1, 1) rotateX(var(--x)) rotateY(var(--y)) translateZ(10px);
       scale: 1;
       opacity: 1;
     }
