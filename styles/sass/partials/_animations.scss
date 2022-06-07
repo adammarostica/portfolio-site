@@ -117,7 +117,7 @@
   
   100% {
     opacity: 1;
-    transform: rotateY(360deg) translateY(-150%);
+    transform: rotateY(360deg) translateY(-150%) translateZ(10px);
   }
 }
 
