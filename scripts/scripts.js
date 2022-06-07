@@ -48,7 +48,7 @@ function checkScroll () {
   // console.log(top, height, bottom);
   // console.log(window.pageYOffset, document.body.offsetHeight, window.innerHeight);
   // document.documentElement.style.setProperty('--scroll', (top / height - window.innerHeight));
-  // console.log(document.documentElement.style);
+  console.log(document.documentElement.style);
 }
 console.log(about);
 window.addEventListener('scroll', throttle(checkScroll, 10), false);
