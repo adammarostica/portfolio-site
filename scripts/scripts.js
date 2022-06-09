@@ -76,11 +76,10 @@ const observer = new IntersectionObserver(function(entries, observer) {
     const section = entry.target.id;
     if (entry.isIntersecting) {
       newIntersection = entry.target.id;
-    } else {
+    }
+    if (!entry.isIntersecting && newIntersection) {
       removeEventListener('scroll', sections[section].scrollFunction);
-      if (newIntersection) {
-        addEventListener('scroll', sections[newIntersection].scrollFunction);
-      }
+      addEventListener('scroll', sections[newIntersection].scrollFunction);
     }
   })
 }, {});
