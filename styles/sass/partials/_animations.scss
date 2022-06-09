@@ -84,11 +84,11 @@
   }
 
   60%, 79% {
-    transform: translateX(0) rotateX(-20deg) rotateY(-20deg);
+    transform: translateX(0) translateZ(100px) rotateX(-20deg) rotateY(-20deg);
   }
 
   100% {
-    transform: translateX(0) translateY(-150%) rotateZ(-60deg);
+    transform: translateX(0) translateY(-150%) translateZ(100px) rotateZ(-60deg);
   }
 }
 
@@ -114,13 +114,13 @@
 
   60%, 87% {
     opacity: 1;
-    transform: rotateY(380deg);
+    transform: rotateY(380deg) translateZ(100px);
     rotateY: 360deg;
   }
   
   100% {
     opacity: 1;
-    transform: rotateY(360deg) translateY(-150%) translateZ(10px) rotateZ(-70deg);
+    transform: rotateY(360deg) translateY(-150%) translateZ(100px) rotateZ(-70deg);
   }
 }
 

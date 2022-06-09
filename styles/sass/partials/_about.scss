@@ -5,15 +5,17 @@
 .about {
   height: 300vh;
   background: $offBlack;
-  background-size: 50% 50%;
   min-height: 100vh;
+  position: relative;
+  &__scroll {
+    position: absolute;
+    top: 55%;
+  }
   .wrapper {
     width: 100%;
     position: sticky;
     top: 0;
     height: 100vh;
-    // scrollbar-width: none;
-    // overflow-y: scroll;
     display: flex;
     flex-direction: column;
     justify-content: center;
