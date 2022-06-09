@@ -1,6 +1,6 @@
 header {
   background-image: linear-gradient(#66136C, #3C2189);
-  min-height: 100vh;
+  min-height: 101vh;
   display: flex;
   align-items: center;
   .wrapper {
@@ -114,9 +114,18 @@ header {
   }
 }
 
-// .intro__name.slide__A {
-//   animation: 1s a-up linear forwards;
-//   animation-iteration-count: 1;
-//   animation-play-state: paused;
-//   animation-delay: calc(var(--scroll) * -1s);
-// }
+.fa-circle-chevron-down {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $steelPink;
+  font-size: 2rem;
+  animation: 1s chevron-bounce ease-in-out alternate infinite;
+}
+
+@keyframes chevron-bounce {
+  100% {
+    transform: translate3d(-20px, -10px, 0);
+  }
+}

@@ -24,36 +24,68 @@ function throttle(cb, delay = 1000) {
   }
 }
 
-// function debounce(func, wait = 10, immediate = true) {
-//   let timeout;
-//   return function (...args) {
-//     const context = this;
-//     const later = function () {
-//       timeout = null;
-//       if (!immediate) func.apply(context, args);
-//     };
-//     const callNow = immediate && !timeout;
-//     clearTimeout(timeout);
-//     timeout = setTimeout(later, wait);
-//     if (callNow) func.apply(context, args);
-//   };
-// }
-
+const header = document.getElementById('header');
 const about = document.getElementById('about');
-function checkScroll () {
+const works = document.getElementById('works');
+let newIntersection = null;
+const sections = {
+  header: {
+    scrollFunction: checkHeaderScroll,
+  },
+  about: {
+    scrollFunction: checkAboutScroll,
+    scrollOption: true
+  },
+  works: {
+    scrollFunction: checkWorksScroll,
+    scrollOption: false,
+  }
+}
+
+function checkHeaderScroll () {
+  // A stub. Not sure if the header section needs a scroll yet, but this function needs to exist for the IntersectionObserver to efficiently add and remove listeners to and from other sections
+}
+
+function checkAboutScroll () {
+  // console.log(activeSection);
   const {top, height}  = about.getBoundingClientRect();
+  // console.log(top, height);
   scrollDistance = -(top);
-  document.documentElement.style.setProperty('--scroll', (scrollDistance/(height - document.documentElement.clientHeight)));
+  document.documentElement.style.setProperty(`--aboutScroll`, (scrollDistance/(height - document.documentElement.clientHeight)));
   // console.log(document.documentElement.clientHeight, window.innerHeight);
   // console.log(top, height, bottom);
   // console.log(window.pageYOffset, document.body.offsetHeight, window.innerHeight);
   // document.documentElement.style.setProperty('--scroll', (top / height - window.innerHeight));
   console.log(document.documentElement.style);
 }
-console.log(about);
-window.addEventListener('scroll', throttle(checkScroll, 10), false);
+
+function checkWorksScroll () {
+  const {top, height}  = works.getBoundingClientRect();
+  scrollDistance = -(top);
+  document.documentElement.style.setProperty(`--worksScroll`, (scrollDistance/(height - document.documentElement.clientHeight)));
+  console.log(document.documentElement.style);
+}
 
 // setTimeout(function() {
 //   const thing = document.querySelector('.intro__name__A1');
 //   thing.classList.add('slide__A');
 // }, 3000);
+// Whenever the IntersectionObserver observes a section entering the viewport, it activates that section's scroll listener. Conversely, whenever it observes a section leaving the viewport, it removes that section's scroll listener.
+const observer = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    const section = entry.target.id;
+    if (entry.isIntersecting) {
+      newIntersection = entry.target.id;
+    } else {
+      removeEventListener('scroll', sections[section].scrollFunction);
+      if (newIntersection) {
+        addEventListener('scroll', sections[newIntersection].scrollFunction);
+      }
+    }
+  })
+}, {});
+
+// Observes the entry of new sections into viewport
+[header, about, works].forEach((section) => {
+  observer.observe(section);
+})

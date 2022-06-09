@@ -9,15 +9,6 @@
     align-items: flex-end;
     &__name {
       font-size: clamp(2.5rem, 15vw, 8rem);
-      &__A1 {
-        text-shadow: 1px 1px #EB7FF3,
-                  2px 2px #EB7FF3,
-                  3px 3px #EB7FF3,
-                  4px 4px #EB7FF3,
-                  5px 5px #EB7FF3,
-                  6px 6px #EB7FF3,
-                  7px 7px #EB7FF3;
-      }
     }
     &__text {
       text-align: right;
