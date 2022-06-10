@@ -33,11 +33,11 @@ const sections = {
     scrollFunction: checkHeaderScroll,
   },
   aboutIntersection: {
-    scrollFunction: throttle(checkAboutScroll, 20),
+    scrollFunction: throttle(checkAboutScroll, 50),
     scrollOption: true,
   },
   worksIntersection: {
-    scrollFunction: throttle(checkWorksScroll, 20),
+    scrollFunction: throttle(checkWorksScroll, 50),
     scrollOption: false,
   },
 };

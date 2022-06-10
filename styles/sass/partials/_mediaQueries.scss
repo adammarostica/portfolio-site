@@ -40,4 +40,13 @@
       align-self: center;
     }
   }
+
+  .works {
+    &__tool {
+      flex-basis: 20%;
+      &__python {
+        display: flex;
+      }
+    }
+  }
 }
