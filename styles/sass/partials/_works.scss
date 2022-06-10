@@ -4,52 +4,86 @@
   position: relative;
   &__scroll {
     position: absolute;
-    top: 85%;
+    bottom: 0;
+    width: 1px;
+    height: 1px;
   }
   &__heading-container {
     height: 100vh;
     width: 100%;
     position: sticky;
     top: 0;
+    overflow: hidden;
+  }
+  .wrapper {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
   }
   &__heading {
     // position: relative;
-    z-index: 5;
+    z-index: 11;
     text-align: center;
     font-family: $bowlby;
     font-size: clamp(2.5rem, 15vw, 8rem);
     color: $offBlack;
-    &__O {
-      color: transparent;
+  }
+  &__letter {
+    position: absolute;
+    z-index: 12;
+    transform: translateX(-50%) translateY(-50%);
+    &__W {
+    left: -80%;
+    animation: 1s works__letter__W ease-out forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--worksScroll) * -1s);
+  }
+  &__O {
+    color: transparent;
+  }
+  &__R {
+    top: -20%;
+    left: 52%;
+    animation: 1s works__letter__R ease-out forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--worksScroll) * -1s);
+    }
+    &__K {
+      top: 52%;
+      left: 72%;
+    }
+    &__S {
+      left: 92%;
+      top: 40%;
     }
   }
   &__circle {
     border-radius: 50%;
     position: absolute;
-    top: 49.5%;
-    left: 34.5%;
+    top: 37%;
+    left: 32.5%;
     transform: translateX(-50%) translateY(-50%);
     &__1 {
       background-color: #FFEF71;
-      animation: 1s works__circle__1 linear forwards;
+      animation: 1s works__circle__1 ease-in-out forwards;
       animation-play-state: paused;
       animation-delay: calc(var(--worksScroll) * -1s);
     }
     &__2 {
       background-color: $offBlack;
       transform: translateX(-50%) translateY(-50%);
-      animation: 1s works__circle__2 linear forwards;
+      animation: 1s works__circle__2 ease-in-out forwards;
       animation-play-state: paused;
       animation-delay: calc(var(--worksScroll) * -1s);
     }
     &__3 {
       background-color: #FFEF71;
       transform: translateX(-50%) translateY(-50%);
-      animation: 1s works__circle__3 linear forwards;
+      animation: 1s works__circle__3 ease-in-out forwards;
       animation-play-state: paused;
       animation-delay: calc(var(--worksScroll) * -1s);
       border-radius: 45% 45% 45% 45% / 42% 42% 42% 42% 
@@ -63,7 +97,7 @@
     height: 0vw;
   }
 
-  50%, 100% {
+  60%, 100% {
     width: max(200vw, 200vh);
     height: max(200vw, 200vh);
   }
@@ -75,9 +109,9 @@
     height: 0vw;
   }
 
-  60%, 100% {
-    width: clamp(2rem, 12.5vw, 8rem);
-    height: clamp(2rem, 12.5vw, 8rem);
+  70%, 100% {
+    width: clamp(2rem, 12.5vw, 7rem);
+    height: clamp(2rem, 12.5vw, 7rem);
   }
 }
 
@@ -87,8 +121,21 @@
     height: 0vw;
   }
 
-  80%, 100% {
-    width: 3vw;
-    height: 6vw;
+  90%, 100% {
+    width: min(3vw, 2rem);
+    height: min(6vw, 4rem);
+  }
+}
+
+@keyframes works__letter__W {
+  
+  100% {
+    left: 11%;
+  }
+}
+
+@keyframes works__letter__R {
+  100% {
+    top: 45%;;
   }
 }

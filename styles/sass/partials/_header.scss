@@ -38,13 +38,6 @@ header {
       transform: scale(0, 0);
       left: -5%;
       animation: .5s grow 1s ease-out forwards;
-      text-shadow: 1px 1px $lavenderMagenta,
-                  2px 2px $lavenderMagenta,
-                  3px 3px $lavenderMagenta,
-                  4px 4px $lavenderMagenta,
-                  5px 5px $lavenderMagenta,
-                  6px 6px $lavenderMagenta,
-                  7px 7px $lavenderMagenta;
     }
     &__D {
       --x: -20deg;
@@ -53,13 +46,6 @@ header {
       top: 20%;
       transform: scale(0, 0);
       animation: .5s grow 1.2s ease-out forwards;
-      text-shadow: -1px 1px $lavenderMagenta,
-                  -2px 2px $lavenderMagenta,
-                  -3px 3px $lavenderMagenta,
-                  -4px 4px $lavenderMagenta,
-                  -5px 5px $lavenderMagenta,
-                  -6px 6px $lavenderMagenta,
-                  -7px 7px $lavenderMagenta;
     }
     &__A2 {
       --x: -35deg;
@@ -68,13 +54,6 @@ header {
       left: 5%;
       transform: scale(0, 0);
       animation: .5s grow 1.4s ease-out forwards;
-      text-shadow: 1px -1px $lavenderMagenta,
-                2px -2px $lavenderMagenta,
-                3px -3px $lavenderMagenta,
-                4px -4px $lavenderMagenta,
-                5px -5px $lavenderMagenta,
-                6px -6px $lavenderMagenta,
-                7px -7px $lavenderMagenta;
     }
     &__M {
       --x: 30deg;
@@ -83,13 +62,6 @@ header {
       right: 10%;
       transform: scale(0, 0);
       animation: .5s grow 1.6s ease-out forwards;
-      text-shadow: -1px -1px $lavenderMagenta,
-                  -2px -2px $lavenderMagenta,
-                  -3px -3px $lavenderMagenta,
-                  -4px -4px $lavenderMagenta,
-                  -5px -5px $lavenderMagenta,
-                  -6px -6px $lavenderMagenta,
-                  -7px -7px $lavenderMagenta;
     }
   }
   &__text {

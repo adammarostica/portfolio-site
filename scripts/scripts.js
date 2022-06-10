@@ -25,18 +25,18 @@ function throttle(cb, delay = 1000) {
 }
 
 const header = document.getElementById('header');
-const about = document.getElementById('about');
-const works = document.getElementById('works');
+const about = document.getElementById('aboutIntersection');
+const works = document.getElementById('worksIntersection');
 let newIntersection = null;
 const sections = {
   header: {
     scrollFunction: checkHeaderScroll,
   },
-  about: {
+  aboutIntersection: {
     scrollFunction: checkAboutScroll,
     scrollOption: true
   },
-  works: {
+  worksIntersection: {
     scrollFunction: checkWorksScroll,
     scrollOption: false,
   }

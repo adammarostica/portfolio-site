@@ -19,3 +19,25 @@
     }
   }
 }
+
+@media (min-width: $desktop) {
+  .about {
+    .wrapper {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 90%;
+    }
+    &__text {
+      order: 1;
+      flex-basis: 40%;
+      // width: 30%;
+    }
+    &__avatar {
+      order: 2;
+      flex-basis: 40%;
+      // width: 30%;
+      align-self: center;
+    }
+  }
+}

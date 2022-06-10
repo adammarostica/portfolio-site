@@ -9,24 +9,28 @@
   position: relative;
   &__scroll {
     position: absolute;
-    top: 55%;
+    top: 50%;
+    width: 1px;
+    height: 1px;
+  }
+  &__container {
+    width: 100%;
+    top: 0;
+    position: sticky;
+    overflow: hidden;
   }
   .wrapper {
-    width: 100%;
-    position: sticky;
-    top: 0;
+    max-width: 1080px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow-x: hidden;
+    // overflow-x: hidden;
   }
   &__avatar {
     position: relative;
     width: 45%;
     align-self: flex-end;
-    margin-right: 5vw;
-    margin-bottom: 1rem;
     color: $steelPink;
     z-index:1;
   }
@@ -40,7 +44,7 @@
   }
   &__span {
     font-family: $bowlby;
-    font-size: 18vw;
+    font-size: clamp(1rem, 18vw, 8rem);
     position: absolute;
     z-index: 1;
     &__A {
@@ -50,13 +54,6 @@
       transform: scale(0);
       animation-play-state: paused;
       animation-delay: calc(var(--aboutScroll) * -.8s);
-      text-shadow: 1px 1px $lavenderMagenta,
-                  2px 2px $lavenderMagenta,
-                  3px 3px $lavenderMagenta,
-                  4px 4px $lavenderMagenta,
-                  5px 5px $lavenderMagenta,
-                  6px 6px $lavenderMagenta,
-                  7px 7px $lavenderMagenta;
     }
     &__B {
       --translateX: 200%;
@@ -66,13 +63,6 @@
       animation: 1s about__B ease-out forwards;
       animation-play-state: paused;
       animation-delay: calc(var(--aboutScroll) * -.8s);
-      text-shadow: -1px 1px $lavenderMagenta,
-                  -2px 1px $lavenderMagenta,
-                  -3px 2px $lavenderMagenta,
-                  -4px 2px $lavenderMagenta,
-                  -5px 3px $lavenderMagenta,
-                  -6px 3px $lavenderMagenta,
-                  -7px 4px $lavenderMagenta;
     }
     &__O {
       --translateX: -400%;
@@ -82,13 +72,6 @@
       animation: 1s about__O ease-out forwards;
       animation-play-state: paused;
       animation-delay: calc(var(--aboutScroll) * -.8s);
-      text-shadow: 1px 0 $lavenderMagenta,
-                  2px 0 $lavenderMagenta,
-                  3px 0 $lavenderMagenta,
-                  4px 0 $lavenderMagenta,
-                  5px 0 $lavenderMagenta,
-                  6px 0 $lavenderMagenta,
-                  7px 0 $lavenderMagenta;
     }
     &__U {
       right: -15%;
@@ -97,13 +80,6 @@
       animation: 1s about__U cubic-bezier(.55,.46,0,1.37) forwards;
       animation-play-state: paused;
       animation-delay: calc(var(--aboutScroll) * -.8s);
-      text-shadow: -1px -1px $lavenderMagenta,
-                  -2px -1px $lavenderMagenta,
-                  -3px -1px $lavenderMagenta,
-                  -4px -2px $lavenderMagenta,
-                  -5px -2px $lavenderMagenta,
-                  -6px -2px $lavenderMagenta,
-                  -7px -3px $lavenderMagenta;
     }
     &__T {
       transform: scale(0);
@@ -112,13 +88,6 @@
       animation: 1s about__T ease-out forwards;
       animation-play-state: paused;
       animation-delay: calc(var(--aboutScroll) * -.8s);
-      text-shadow: 0 -1px $lavenderMagenta,
-                  0 -2px $lavenderMagenta,
-                  0 -3px $lavenderMagenta,
-                  0 -4px $lavenderMagenta,
-                  0 -5px $lavenderMagenta,
-                  0 -6px $lavenderMagenta,
-                  0 -7px $lavenderMagenta;
     }
   }
   &__background {
@@ -131,9 +100,9 @@
   }
 
   &__text {
-    margin: 30px;
+    margin: 30px 0;
     text-align: left;
-    width: 70%;
+    width: 65%;
     opacity: 0;
     z-index: 1;
     animation: 1s about__text ease-out forwards;
