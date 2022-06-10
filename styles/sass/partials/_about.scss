@@ -56,7 +56,7 @@
       animation-delay: calc(var(--aboutScroll) * -.8s);
     }
     &__B {
-      --translateX: 200%;
+      --translateX: 30vw;
       top: -9%;
       right: -7%;
       transform: translateX(var(--translateX));
@@ -65,7 +65,7 @@
       animation-delay: calc(var(--aboutScroll) * -.8s);
     }
     &__O {
-      --translateX: -400%;
+      --translateX: -70vw;
       top: 25%;
       left: -18%;
       transform: translateX(var(--translateX));

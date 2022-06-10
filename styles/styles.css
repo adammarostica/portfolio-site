@@ -818,7 +818,7 @@ header .wrapper {
           animation-delay: calc(var(--aboutScroll) * -0.8s);
 }
 .about__span__B {
-  --translateX: 200%;
+  --translateX: 30vw;
   top: -9%;
   right: -7%;
   -webkit-transform: translateX(var(--translateX));
@@ -831,7 +831,7 @@ header .wrapper {
           animation-delay: calc(var(--aboutScroll) * -0.8s);
 }
 .about__span__O {
-  --translateX: -400%;
+  --translateX: -70vw;
   top: 25%;
   left: -18%;
   -webkit-transform: translateX(var(--translateX));
