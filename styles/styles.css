@@ -230,6 +230,7 @@ html {
   font-size: 125%;
   text-rendering: optimizeLegibility;
   font-family: "Josefin Sans", sans-serif;
+  letter-spacing: -1px;
   color: #EEE;
 }
 
@@ -794,7 +795,6 @@ header .wrapper {
       flex-basis: 30%;
   color: white;
   text-align: center;
-  letter-spacing: -2px;
 }
 .intro__text h1 {
   opacity: 0;
@@ -981,6 +981,64 @@ header .wrapper {
           animation-delay: calc(var(--aboutScroll) * -1s);
 }
 
+.projects {
+  background-color: #292a32;
+  color: #EEE;
+  overflow: hidden;
+}
+.projects h2 {
+  text-align: center;
+  font-family: "Bowlby One", cursive;
+  font-size: 2rem;
+  color: #ffef71;
+  letter-spacing: 0.3rem;
+  padding: 1rem 0 3rem;
+}
+.projects .wrapper {
+  width: 90%;
+  max-width: 1080px;
+}
+
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.project__img {
+  position: relative;
+  height: 100%;
+  width: 35%;
+}
+.project__img__mockup {
+  position: relative;
+  z-index: 21;
+}
+.project__img__shadow {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  background-color: #EB7FF3;
+}
+.project__img__shadow--left {
+  -webkit-transform: translateX(-10%) translateY(10%);
+          transform: translateX(-10%) translateY(10%);
+}
+.project__img__shadow--right {
+  -webkit-transform: translateX(10%) translateY(10%);
+          transform: translateX(10%) translateY(10%);
+}
+.project__text {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+
 .works {
   height: 200vh;
   background: #292a32;
@@ -992,7 +1050,7 @@ header .wrapper {
   width: 1px;
   height: 1px;
 }
-.works__heading-container {
+.works__container {
   height: 100vh;
   width: 100%;
   position: sticky;
@@ -1021,25 +1079,25 @@ header .wrapper {
 }
 .works__word__how {
   top: 10%;
-  left: 10%;
+  left: 20%;
   -webkit-transform: rotateZ(-10deg);
           transform: rotateZ(-10deg);
 }
 .works__word__I {
   top: 10%;
-  left: 80%;
+  left: 70%;
   -webkit-transform: rotateZ(10deg);
           transform: rotateZ(10deg);
 }
 .works__word__do {
   top: 35%;
-  left: 15%;
+  left: 25%;
   -webkit-transform: rotateZ(10deg);
           transform: rotateZ(10deg);
 }
 .works__word__my {
   top: 35%;
-  left: 65%;
+  left: 55%;
   -webkit-transform: rotateZ(-10deg);
           transform: rotateZ(-10deg);
 }
@@ -1205,10 +1263,6 @@ header .wrapper {
 }
 .works__tool__python {
   display: none;
-}
-
-.works__tool__ .work:hover {
-  color: #cc6699;
 }
 
 @-webkit-keyframes work__tools {

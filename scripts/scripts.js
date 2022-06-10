@@ -26,7 +26,7 @@ function throttle(cb, delay = 1000) {
 
 const header = document.getElementById("header");
 const about = document.getElementById("aboutIntersection");
-const works = document.getElementById("worksIntersection");
+const works = document.getElementById("workIntersection");
 let newIntersection = null;
 const sections = {
   header: {
@@ -36,7 +36,7 @@ const sections = {
     scrollFunction: throttle(checkAboutScroll, 50),
     scrollOption: true,
   },
-  worksIntersection: {
+  workIntersection: {
     scrollFunction: throttle(checkWorksScroll, 50),
     scrollOption: false,
   },

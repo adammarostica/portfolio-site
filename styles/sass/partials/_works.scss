@@ -8,7 +8,7 @@
     width: 1px;
     height: 1px;
   }
-  &__heading-container {
+  &__container {
     height: 100vh;
     width: 100%;
     position: sticky;
@@ -20,12 +20,8 @@
     width: 80%;
     max-width: 800px;
     height: 100vh;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
   }
   &__heading {
-    // position: relative;
     z-index: 11;
     text-align: center;
     font-family: $bowlby;
@@ -39,22 +35,22 @@
     transform: translateX(-50%) translateY(-50%);
     &__how {
       top: 10%;
-      left: 10%;
+      left: 20%;
       transform: rotateZ(-10deg);
     }
     &__I {
       top: 10%;
-      left: 80%;
+      left: 70%;
       transform: rotateZ(10deg);
     }
     &__do {
       top: 35%;
-      left: 15%;
+      left: 25%;
       transform: rotateZ(10deg);
     }
     &__my {
       top: 35%;
-      left: 65%;
+      left: 55%;
       transform: rotateZ(-10deg);
     }
   }
@@ -181,14 +177,6 @@
       display: none;
     }
   }
-}
-
-
-
-.works__tool__
-
-.work:hover {
-  color: #cc6699;
 }
 
 @keyframes work__tools {
