@@ -1102,12 +1102,12 @@ header .wrapper {
 .project__img__shadow {
   position: absolute;
   z-index: 20;
-  -webkit-filter: blur(7px);
-          filter: blur(7px);
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
 }
 .project__img__shadow__1 {
-  -webkit-transform: translateX(-50vw) translateY(-92%);
-          transform: translateX(-50vw) translateY(-92%);
+  -webkit-transform: translateX(-50vw) translateY(-94%);
+          transform: translateX(-50vw) translateY(-94%);
   -webkit-animation: 1s shadow__1 ease-out forwards;
           animation: 1s shadow__1 ease-out forwards;
   -webkit-animation-play-state: paused;
@@ -1116,8 +1116,8 @@ header .wrapper {
           animation-delay: calc(var(--aboutScroll) * -0.7s);
 }
 .project__img__shadow__2 {
-  -webkit-transform: translateX(50vw) translateY(-92%);
-          transform: translateX(50vw) translateY(-92%);
+  -webkit-transform: translateX(50vw) translateY(-97%);
+          transform: translateX(50vw) translateY(-97%);
   -webkit-animation: 1s shadow__2 ease-out forwards;
           animation: 1s shadow__2 ease-out forwards;
   -webkit-animation-play-state: paused;
@@ -1126,8 +1126,8 @@ header .wrapper {
           animation-delay: calc(var(--aboutScroll) * -0.7s);
 }
 .project__img__shadow__3 {
-  -webkit-transform: translateX(-50vw) translateY(-92%);
-          transform: translateX(-50vw) translateY(-92%);
+  -webkit-transform: translateX(-50vw) translateY(-94%);
+          transform: translateX(-50vw) translateY(-94%);
   -webkit-animation: 1s shadow__3 ease-in forwards;
           animation: 1s shadow__3 ease-in forwards;
   -webkit-animation-play-state: paused;
@@ -1136,8 +1136,8 @@ header .wrapper {
           animation-delay: calc(var(--projectsScroll) * -0.7s);
 }
 .project__img__shadow__4 {
-  -webkit-transform: translateX(50vw) translateY(-92%);
-          transform: translateX(50vw) translateY(-92%);
+  -webkit-transform: translateX(50vw) translateY(-97%);
+          transform: translateX(50vw) translateY(-97%);
   -webkit-animation: 1s shadow__4 ease-in forwards;
           animation: 1s shadow__4 ease-in forwards;
   -webkit-animation-play-state: paused;
@@ -1152,23 +1152,23 @@ header .wrapper {
 
 @-webkit-keyframes shadow__1 {
   0%, 75% {
-    -webkit-transform: translateX(-50vw) translateY(-92%);
-            transform: translateX(-50vw) translateY(-92%);
+    -webkit-transform: translateX(-50vw) translateY(-94%);
+            transform: translateX(-50vw) translateY(-94%);
   }
   95%, 100% {
-    -webkit-transform: translateX(-5%) translateY(-92%);
-            transform: translateX(-5%) translateY(-92%);
+    -webkit-transform: translateX(-4%) translateY(-94%);
+            transform: translateX(-4%) translateY(-94%);
   }
 }
 
 @keyframes shadow__1 {
   0%, 75% {
-    -webkit-transform: translateX(-50vw) translateY(-92%);
-            transform: translateX(-50vw) translateY(-92%);
+    -webkit-transform: translateX(-50vw) translateY(-94%);
+            transform: translateX(-50vw) translateY(-94%);
   }
   95%, 100% {
-    -webkit-transform: translateX(-5%) translateY(-92%);
-            transform: translateX(-5%) translateY(-92%);
+    -webkit-transform: translateX(-4%) translateY(-94%);
+            transform: translateX(-4%) translateY(-94%);
   }
 }
 @-webkit-keyframes project__1 {
@@ -1219,22 +1219,22 @@ header .wrapper {
 }
 @-webkit-keyframes shadow__2 {
   0%, 90% {
-    -webkit-transform: translateX(50vw) translateY(-92%);
-            transform: translateX(50vw) translateY(-92%);
+    -webkit-transform: translateX(50vw) translateY(-97%);
+            transform: translateX(50vw) translateY(-97%);
   }
   100% {
-    -webkit-transform: translateX(5%) translateY(-92%);
-            transform: translateX(5%) translateY(-92%);
+    -webkit-transform: translateX(6%) translateY(-97%);
+            transform: translateX(6%) translateY(-97%);
   }
 }
 @keyframes shadow__2 {
   0%, 90% {
-    -webkit-transform: translateX(50vw) translateY(-92%);
-            transform: translateX(50vw) translateY(-92%);
+    -webkit-transform: translateX(50vw) translateY(-97%);
+            transform: translateX(50vw) translateY(-97%);
   }
   100% {
-    -webkit-transform: translateX(5%) translateY(-92%);
-            transform: translateX(5%) translateY(-92%);
+    -webkit-transform: translateX(6%) translateY(-97%);
+            transform: translateX(6%) translateY(-97%);
   }
 }
 @-webkit-keyframes project__2 {
@@ -1285,22 +1285,22 @@ header .wrapper {
 }
 @-webkit-keyframes shadow__3 {
   0% {
-    -webkit-transform: translateX(-50vw) translateY(-92%);
-            transform: translateX(-50vw) translateY(-92%);
+    -webkit-transform: translateX(-50vw) translateY(-94%);
+            transform: translateX(-50vw) translateY(-94%);
   }
   45%, 100% {
-    -webkit-transform: translateX(-5%) translateY(-92%);
-            transform: translateX(-5%) translateY(-92%);
+    -webkit-transform: translateX(-4%) translateY(-94%);
+            transform: translateX(-4%) translateY(-94%);
   }
 }
 @keyframes shadow__3 {
   0% {
-    -webkit-transform: translateX(-50vw) translateY(-92%);
-            transform: translateX(-50vw) translateY(-92%);
+    -webkit-transform: translateX(-50vw) translateY(-94%);
+            transform: translateX(-50vw) translateY(-94%);
   }
   45%, 100% {
-    -webkit-transform: translateX(-5%) translateY(-92%);
-            transform: translateX(-5%) translateY(-92%);
+    -webkit-transform: translateX(-4%) translateY(-94%);
+            transform: translateX(-4%) translateY(-94%);
   }
 }
 @-webkit-keyframes project__3 {
@@ -1361,8 +1361,8 @@ header .wrapper {
             transform: translateX(50vw) translateY(-92%);
   }
   65%, 100% {
-    -webkit-transform: translateX(5%) translateY(-92%);
-            transform: translateX(5%) translateY(-92%);
+    -webkit-transform: translateX(6%) translateY(-97%);
+            transform: translateX(6%) translateY(-97%);
   }
 }
 @keyframes shadow__4 {
@@ -1371,8 +1371,8 @@ header .wrapper {
             transform: translateX(50vw) translateY(-92%);
   }
   65%, 100% {
-    -webkit-transform: translateX(5%) translateY(-92%);
-            transform: translateX(5%) translateY(-92%);
+    -webkit-transform: translateX(6%) translateY(-97%);
+            transform: translateX(6%) translateY(-97%);
   }
 }
 @-webkit-keyframes project__4 {
