@@ -24,16 +24,18 @@ function throttle(cb, delay = 1000) {
   };
 }
 
-const header = document.getElementById("header");
-const about = document.getElementById("aboutIntersection");
-const works = document.getElementById("workIntersection");
-const projects = document.getElementById("projectsIntersection");
+const header = document.getElementById('header');
+const about = document.getElementById('aboutIntersection');
+const works = document.getElementById('workIntersection');
+const projects = document.getElementById('projectsIntersection');
+const contact = document.getElementById('contactIntersection');
 let newIntersection = null;
 const sections = {
   header: checkHeaderScroll,
   aboutIntersection: throttle(checkAboutScroll, 50),
   workIntersection: throttle(checkWorksScroll, 50),
   projectsIntersection: throttle(checkProjectsScroll, 50),
+  contactIntersection: throttle(checkContactScroll, 50),
 };
 
 function checkHeaderScroll() {
@@ -69,6 +71,15 @@ function checkProjectsScroll() {
   // console.log(document.documentElement.style);
 }
 
+function checkContactScroll() {
+  const { top, height } = contact.getBoundingClientRect();
+  scrollDistance = -top;
+  document.documentElement.style.setProperty(
+    `--contactScroll`,
+    scrollDistance / (height - document.documentElement.clientHeight)
+  );
+}
+
 // Whenever the IntersectionObserver observes a section entering the viewport, it activates that section's scroll listener. Conversely, whenever it observes a section leaving the viewport, it removes that section's scroll listener.
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -83,7 +94,7 @@ const observer = new IntersectionObserver((entries) => {
 }, {});
 
 // Observes the entry of new sections into viewport
-[header, about, projects, works].forEach((section) => {
+[header, about, projects, works, contact].forEach((section) => {
   observer.observe(section);
 });
 
