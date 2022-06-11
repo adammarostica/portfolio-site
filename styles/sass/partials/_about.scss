@@ -50,8 +50,8 @@
     &__A {
       top: -25%;
       left: -15%;
-      animation: 1s about__A ease-out forwards;
       transform: scale(0);
+      animation: 1s about__A ease-out forwards;
       animation-play-state: paused;
       animation-delay: calc(var(--aboutScroll) * -.8s);
     }

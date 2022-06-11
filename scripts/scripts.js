@@ -27,19 +27,13 @@ function throttle(cb, delay = 1000) {
 const header = document.getElementById("header");
 const about = document.getElementById("aboutIntersection");
 const works = document.getElementById("workIntersection");
+const projects = document.getElementById("projectsIntersection");
 let newIntersection = null;
 const sections = {
-  header: {
-    scrollFunction: checkHeaderScroll,
-  },
-  aboutIntersection: {
-    scrollFunction: throttle(checkAboutScroll, 50),
-    scrollOption: true,
-  },
-  workIntersection: {
-    scrollFunction: throttle(checkWorksScroll, 50),
-    scrollOption: false,
-  },
+  header: checkHeaderScroll,
+  aboutIntersection: throttle(checkAboutScroll, 50),
+  workIntersection: throttle(checkWorksScroll, 50),
+  projectsIntersection: throttle(checkProjectsScroll, 50),
 };
 
 function checkHeaderScroll() {
@@ -65,21 +59,31 @@ function checkWorksScroll() {
   );
 }
 
+function checkProjectsScroll() {
+  const { top, height } = projects.getBoundingClientRect();
+  scrollDistance = -top;
+  document.documentElement.style.setProperty(
+    `--projectsScroll`,
+    scrollDistance / (height - document.documentElement.clientHeight)
+  );
+  // console.log(document.documentElement.style);
+}
+
 // Whenever the IntersectionObserver observes a section entering the viewport, it activates that section's scroll listener. Conversely, whenever it observes a section leaving the viewport, it removes that section's scroll listener.
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     const section = entry.target.id;
     if (entry.isIntersecting) {
-      addEventListener("scroll", sections[section].scrollFunction);
+      addEventListener("scroll", sections[section]);
     }
     if (!entry.isIntersecting) {
-      removeEventListener("scroll", sections[section].scrollFunction);
+      removeEventListener("scroll", sections[section]);
     }
   });
 }, {});
 
 // Observes the entry of new sections into viewport
-[header, about, works].forEach((section) => {
+[header, about, projects, works].forEach((section) => {
   observer.observe(section);
 });
 
