@@ -83,17 +83,17 @@
 @keyframes about__U {
   0%, 15% {
     opacity: 0;
-    transform: rotateY(0deg);
+    transform: rotateY(90deg);
   }
 
   60%, 87% {
     opacity: 1;
-    transform: rotateY(360deg);
+    transform: rotateY(0deg);
   }
   
   100% {
     opacity: 1;
-    transform: rotateY(360deg) translateY(-150%) translateZ(1000px) rotateZ(-70deg);
+    transform: rotateY(0deg) translateY(-150%) translateZ(1000px) rotateZ(-70deg);
   }
 }
 
