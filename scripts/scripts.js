@@ -1,3 +1,29 @@
+const burger = document.getElementById('burger__menu');
+const navList = document.getElementById('nav__list');
+const header = document.getElementById('header');
+const about = document.getElementById('aboutIntersection');
+const work = document.getElementById('workIntersection');
+const projects = document.getElementById('projects');
+const contact = document.getElementById('contactIntersection');
+const sections = {
+  header: checkHeaderScroll,
+  aboutIntersection: throttle(checkAboutScroll, 50),
+  workIntersection: throttle(checkWorkScroll, 50),
+  projects: throttle(checkProjectsScroll, 50),
+  contactIntersection: throttle(checkContactScroll, 50),
+};
+
+burger.addEventListener('click', function() {
+  if (this.classList.contains('burger__menu--x')) {
+    this.classList.replace('burger__menu--x', 'burger__menu--burger');
+  } else if (this.classList.contains('burger__menu--burger')) {
+    this.classList.replace('burger__menu--burger', 'burger__menu--x');
+  } else {
+    this.classList.add('burger__menu--x');
+  }
+  navList.classList.toggle('nav__list--visible');
+});
+
 function throttle(cb, delay = 1000) {
   let shouldWait = false;
   let waitingArgs;
@@ -24,20 +50,6 @@ function throttle(cb, delay = 1000) {
   };
 }
 
-const header = document.getElementById('header');
-const about = document.getElementById('aboutIntersection');
-const work = document.getElementById('workIntersection');
-const projects = document.getElementById('projects');
-const contact = document.getElementById('contactIntersection');
-let newIntersection = null;
-const sections = {
-  header: checkHeaderScroll,
-  aboutIntersection: throttle(checkAboutScroll, 50),
-  workIntersection: throttle(checkWorkScroll, 50),
-  projects: throttle(checkProjectsScroll, 50),
-  contactIntersection: throttle(checkContactScroll, 50),
-};
-
 function checkHeaderScroll() {
   // A stub. Not sure if the header section needs a scroll yet, but this function needs to exist for the IntersectionObserver to efficiently add and remove listeners to and from other sections
 }
@@ -49,7 +61,6 @@ function checkAboutScroll() {
     `--aboutScroll`,
     scrollDistance / (height - document.documentElement.clientHeight)
   );
-  // console.log(document.documentElement.style);
 }
 
 function checkWorkScroll() {
@@ -68,7 +79,6 @@ function checkProjectsScroll() {
     `--projectsScroll`,
     scrollDistance / (height - document.documentElement.clientHeight)
   );
-  // console.log(document.documentElement.style);
 }
 
 function checkContactScroll() {
@@ -97,24 +107,3 @@ const observer = new IntersectionObserver((entries) => {
 [header, about, projects, work, contact].forEach((section) => {
   observer.observe(section);
 });
-
-// setTimeout(function() {
-//   const thing = document.querySelector('.intro__name__A1');
-//   thing.classList.add('slide__A');
-// }, 3000);
-
-// Observer logic that guarantees only one scroll listener is active at a time.
-/* 
-const observer = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(entry => {
-    const section = entry.target.id;
-    if (entry.isIntersecting) {
-      newIntersection = entry.target.id;
-    }
-    if (!entry.isIntersecting && newIntersection) {
-      removeEventListener('scroll', sections[section].scrollFunction);
-      addEventListener('scroll', sections[newIntersection].scrollFunction);
-    }
-  })
-}, {});
-*/

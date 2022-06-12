@@ -18,21 +18,24 @@
     width: 100%;
     top: 0;
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
     &__list {
+      margin-top: 1rem;
       display: flex;
-      &__item {
-        padding: .2rem 1.5vw;
-        transition: padding .3s ease-out;
-        &:hover, &:focus {
-          padding-top: .5rem;
-        }
+      flex-direction: row;
+      transform: none;
+      &__link {
+        padding: 1rem min(2vw, 1.5rem);
       }
     }
+  }
+  .burger__menu {
+    display: none;
   }  
 }
 
-@media (min-width: 500px) {
+@media (min-width: 539px) {
   header {
     .wrapper {
       width: 80%;

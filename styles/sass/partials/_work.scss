@@ -32,24 +32,24 @@
     position: absolute;
     color: $sandyYellow;
     font-family: $josefin;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate(-50%, -50%);
     &__how {
-      top: 10%;
-      left: 20%;
+      top: 24.5%;
+      left: 19.5%;
       transform: rotateZ(-10deg);
     }
     &__I {
-      top: 10%;
+      top: 25%;
       left: 70%;
       transform: rotateZ(10deg);
     }
     &__do {
-      top: 35%;
+      top: 60%;
       left: 25%;
       transform: rotateZ(10deg);
     }
     &__my {
-      top: 35%;
+      top: 60%;
       left: 55%;
       transform: rotateZ(-10deg);
     }
@@ -57,7 +57,7 @@
   &__letter {
     position: absolute;
     z-index: 12;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate(-50%, -50%);
     &__W {
       top: 35%;
       left: -80%;
@@ -88,7 +88,7 @@
     position: absolute;
     top: 34.8%;
     left: 41%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate(-50%, -50%);
     &__1 {
       background-color: $sandyYellow;
       animation: 1s work__circle__1 ease-in-out forwards;
@@ -176,11 +176,5 @@
     &__python {
       display: none;
     }
-  }
-}
-
-@keyframes work__tools {
-  100% {
-    top: 65%;
   }
 }

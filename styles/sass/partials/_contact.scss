@@ -115,7 +115,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    // gap: 1vw;
     aspect-ratio: 1;
     transform: translateY(40vh);
     opacity: 0;
@@ -141,120 +140,5 @@
         }
       }
     }
-  }
-}
-
-@keyframes fade-to-black {
-  0% {
-    background-color: $sandyYellow;
-  }
-  20%, 100% {
-    background-color: $offBlack;
-  }
-}
-
-@keyframes contact__letter__C1 {
-  0% {
-    transform: translate(-50vw);
-    opacity: 0;
-  }
-  10%, 100% {
-    transform: translate(0);
-    opacity: 1;
-  }
-}
-@keyframes contact__letter__O {
-  0%, 10% {
-    transform: scale(0) translateY(-6vw);
-  }
-  20%, 100% {
-    transform: scale(1) translateY(-6vw);
-  }
-}
-@keyframes contact__letter__N {
-  0%, 20% {
-    transform: translateY(70vh);
-    opacity: 0;
-  }
-  30%, 100% {
-    opacity: 1;
-    transform: scale(1) translateY(-3vw);
-  }
-}
-@keyframes contact__letter__T1 {
-  0%, 30% {
-    transform: scale(0) translateY(-50vh);
-    opacity: 0;
-  }
-  40%, 100% {
-    transform: scale(1) translateY(-7vw);
-    opacity: 1;
-  }
-}
-@keyframes contact__letter__A {
-  0%, 40% {
-    transform: perspective(500px) rotateX(90deg);
-    opacity: 0;
-  }
-  50%, 100% {
-    transform: perspective(500px) rotateX(0deg) translateY(1vw);
-    opacity: 1;
-  }
-}
-@keyframes contact__letter__C2 {
-  0%, 50% {
-    transform: translateY(25vh);
-    opacity: 0;
-  }
-  60%, 100% {
-    transform: translateY(-4vw);
-    opacity: 1;
-  }
-}
-@keyframes contact__letter__T2 {
-  0%, 60% {
-    opacity: 0;
-    transform: translateY(3vw) rotateY(90deg);
-  }
-  70%, 100% {
-    opacity: 1;
-    transform: translateY(3vw) rotateY(0deg);
-  }
-}
-
-@keyframes contact__sub-heading {
-  0%, 50% {
-    transform: translateX(-10vw);
-    opacity: 0;
-  }
-  80%, 100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes contact__info {
-  0%, 70% {
-    transform: translateY(10vh);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes mailbox {
-  0%, 40% {
-    transform: skewX(20deg) translateX(50vw);
-  }
-  60% {
-    transform: skewX(20deg) translateX(-5vw);
-  }
-  65%, 70% {
-    transform: skewX(30deg) translateX(-5vw);
-  }
-  80%, 100% {
-    transform: translateX(-7vw);
   }
 }
