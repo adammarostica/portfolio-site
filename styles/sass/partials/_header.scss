@@ -43,10 +43,10 @@ header {
     border-radius: 50%;
   }
   &__image {
-    animation: .7s grow .5s ease-out forwards;
+    animation: .7s header-grow .5s ease-out forwards;
     opacity: 0;
   }
-  &__name {
+  &__letter {
     font-family: $bowlby;
     font-size: clamp(2.5rem, 21vw, 8rem);
     line-height: 1;
@@ -59,7 +59,7 @@ header {
       --y: -10deg;
       transform: scale(0, 0);
       left: -5%;
-      animation: .5s grow 1s ease-out forwards;
+      animation: .5s header-grow 1s ease-out forwards;
     }
     &__D {
       --x: -20deg;
@@ -67,7 +67,7 @@ header {
       right: -10%;
       top: 20%;
       transform: scale(0, 0);
-      animation: .5s grow 1.2s ease-out forwards;
+      animation: .5s header-grow 1.2s ease-out forwards;
     }
     &__A2 {
       --x: -35deg;
@@ -75,7 +75,7 @@ header {
       bottom: 10%;
       left: 5%;
       transform: scale(0, 0);
-      animation: .5s grow 1.4s ease-out forwards;
+      animation: .5s header-grow 1.4s ease-out forwards;
     }
     &__M {
       --x: 30deg;
@@ -83,7 +83,7 @@ header {
       bottom: -10%;
       right: 10%;
       transform: scale(0, 0);
-      animation: .5s grow 1.6s ease-out forwards;
+      animation: .5s header-grow 1.6s ease-out forwards;
     }
   }
   &__text {

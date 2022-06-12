@@ -1,4 +1,4 @@
-  @keyframes grow {
+  @keyframes header-grow {
     from {
       transform: scale(0, 0);
       scale: 0
@@ -32,16 +32,6 @@
   to {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-@keyframes fade-to-black {
-  from {
-    background-size: 100% 100%;
-  }
-
-  to {
-    background-size: 0 100%;
   }
 }
 
@@ -104,7 +94,7 @@
   
   100% {
     opacity: 1;
-    transform: rotateY(360deg) translateY(-150%) translateZ(100px) rotateZ(-70deg);
+    transform: rotateY(360deg) translateY(-150%) translateZ(1000px) rotateZ(-70deg);
   }
 }
 
@@ -150,11 +140,15 @@
   75% {
     inset: 49.5% 0 50% 0;
     background-color: $offWhite;
+    border-radius: 0px;
+    filter: none;
   }
 
   78% {
     background-color: $offWhite;
-    inset: 49%;
+    inset: 48% 49%;
+    border-radius: 50%;
+    filter: blur(3px);
   }
 
   80%, 100% {

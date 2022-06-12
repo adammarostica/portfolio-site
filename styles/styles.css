@@ -277,7 +277,7 @@ a {
   color: #EEE;
 }
 
-@-webkit-keyframes grow {
+@-webkit-keyframes header-grow {
   from {
     -webkit-transform: scale(0, 0);
             transform: scale(0, 0);
@@ -291,7 +291,7 @@ a {
   }
 }
 
-@keyframes grow {
+@keyframes header-grow {
   from {
     -webkit-transform: scale(0, 0);
             transform: scale(0, 0);
@@ -354,22 +354,6 @@ a {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
-  }
-}
-@-webkit-keyframes fade-to-black {
-  from {
-    background-size: 100% 100%;
-  }
-  to {
-    background-size: 0 100%;
-  }
-}
-@keyframes fade-to-black {
-  from {
-    background-size: 100% 100%;
-  }
-  to {
-    background-size: 0 100%;
   }
 }
 @-webkit-keyframes about__A {
@@ -476,8 +460,8 @@ a {
   }
   100% {
     opacity: 1;
-    -webkit-transform: rotateY(360deg) translateY(-150%) translateZ(100px) rotateZ(-70deg);
-            transform: rotateY(360deg) translateY(-150%) translateZ(100px) rotateZ(-70deg);
+    -webkit-transform: rotateY(360deg) translateY(-150%) translateZ(1000px) rotateZ(-70deg);
+            transform: rotateY(360deg) translateY(-150%) translateZ(1000px) rotateZ(-70deg);
   }
 }
 @keyframes about__U {
@@ -494,8 +478,8 @@ a {
   }
   100% {
     opacity: 1;
-    -webkit-transform: rotateY(360deg) translateY(-150%) translateZ(100px) rotateZ(-70deg);
-            transform: rotateY(360deg) translateY(-150%) translateZ(100px) rotateZ(-70deg);
+    -webkit-transform: rotateY(360deg) translateY(-150%) translateZ(1000px) rotateZ(-70deg);
+            transform: rotateY(360deg) translateY(-150%) translateZ(1000px) rotateZ(-70deg);
   }
 }
 @-webkit-keyframes about__T {
@@ -570,10 +554,16 @@ a {
   75% {
     inset: 49.5% 0 50% 0;
     background-color: #EEE;
+    border-radius: 0px;
+    -webkit-filter: none;
+            filter: none;
   }
   78% {
     background-color: #EEE;
-    inset: 49%;
+    inset: 48% 49%;
+    border-radius: 50%;
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
   }
   80%, 100% {
     inset: 50%;
@@ -589,10 +579,16 @@ a {
   75% {
     inset: 49.5% 0 50% 0;
     background-color: #EEE;
+    border-radius: 0px;
+    -webkit-filter: none;
+            filter: none;
   }
   78% {
     background-color: #EEE;
-    inset: 49%;
+    inset: 48% 49%;
+    border-radius: 50%;
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
   }
   80%, 100% {
     inset: 50%;
@@ -783,11 +779,11 @@ header .wrapper {
   border-radius: 50%;
 }
 .intro__image {
-  -webkit-animation: 0.7s grow 0.5s ease-out forwards;
-          animation: 0.7s grow 0.5s ease-out forwards;
+  -webkit-animation: 0.7s header-grow 0.5s ease-out forwards;
+          animation: 0.7s header-grow 0.5s ease-out forwards;
   opacity: 0;
 }
-.intro__name {
+.intro__letter {
   font-family: "Bowlby One", cursive;
   font-size: clamp(2.5rem, 21vw, 8rem);
   line-height: 1;
@@ -795,45 +791,45 @@ header .wrapper {
   position: absolute;
   z-index: 5;
 }
-.intro__name__A1 {
+.intro__letter__A1 {
   display: block;
   --x: 35deg;
   --y: -10deg;
   -webkit-transform: scale(0, 0);
           transform: scale(0, 0);
   left: -5%;
-  -webkit-animation: 0.5s grow 1s ease-out forwards;
-          animation: 0.5s grow 1s ease-out forwards;
+  -webkit-animation: 0.5s header-grow 1s ease-out forwards;
+          animation: 0.5s header-grow 1s ease-out forwards;
 }
-.intro__name__D {
+.intro__letter__D {
   --x: -20deg;
   --y: -30deg;
   right: -10%;
   top: 20%;
   -webkit-transform: scale(0, 0);
           transform: scale(0, 0);
-  -webkit-animation: 0.5s grow 1.2s ease-out forwards;
-          animation: 0.5s grow 1.2s ease-out forwards;
+  -webkit-animation: 0.5s header-grow 1.2s ease-out forwards;
+          animation: 0.5s header-grow 1.2s ease-out forwards;
 }
-.intro__name__A2 {
+.intro__letter__A2 {
   --x: -35deg;
   --y: -20deg;
   bottom: 10%;
   left: 5%;
   -webkit-transform: scale(0, 0);
           transform: scale(0, 0);
-  -webkit-animation: 0.5s grow 1.4s ease-out forwards;
-          animation: 0.5s grow 1.4s ease-out forwards;
+  -webkit-animation: 0.5s header-grow 1.4s ease-out forwards;
+          animation: 0.5s header-grow 1.4s ease-out forwards;
 }
-.intro__name__M {
+.intro__letter__M {
   --x: 30deg;
   --y: -20deg;
   bottom: -10%;
   right: 10%;
   -webkit-transform: scale(0, 0);
           transform: scale(0, 0);
-  -webkit-animation: 0.5s grow 1.6s ease-out forwards;
-          animation: 0.5s grow 1.6s ease-out forwards;
+  -webkit-animation: 0.5s header-grow 1.6s ease-out forwards;
+          animation: 0.5s header-grow 1.6s ease-out forwards;
 }
 .intro__text {
   margin-top: 1rem;
@@ -1920,6 +1916,15 @@ header .wrapper {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   color: #ffef71;
+}
+
+@-webkit-keyframes fade-to-black {
+  0% {
+    background-color: #ffef71;
+  }
+  20%, 100% {
+    background-color: #292a32;
+  }
 }
 
 @keyframes fade-to-black {
