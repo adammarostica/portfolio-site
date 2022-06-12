@@ -4,8 +4,30 @@ header {
   display: flex;
   align-items: center;
   .wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 101vh;
     width: 70%;
     max-width: 800px;
+  }
+}
+
+.nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  &__list {
+    display: flex;
+    &__item {
+      // padding: .2rem;
+      transition: padding .3s ease-out;
+      &:hover, &:focus {
+        padding-top: .5rem;
+      }
+    }
   }
 }
 

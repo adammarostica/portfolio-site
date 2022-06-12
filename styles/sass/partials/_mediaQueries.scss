@@ -1,3 +1,37 @@
+@media (max-width: 455px) {
+  .contact {
+    &__info {
+      flex-basis: 70%;
+      &__link p {
+      font-size: 0.9rem;
+      }
+    }
+    &__img {
+      flex-basis: 30%;
+    }
+  }
+}
+
+@media (min-width: $tablet) {
+  .nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    &__list {
+      display: flex;
+      &__item {
+        padding: .2rem 1.5vw;
+        transition: padding .3s ease-out;
+        &:hover, &:focus {
+          padding-top: .5rem;
+        }
+      }
+    }
+  }  
+}
+
 @media (min-width: 500px) {
   header {
     .wrapper {
@@ -40,13 +74,20 @@
       align-self: center;
     }
   }
-
   .works {
     &__tool {
       flex-basis: 20%;
       &__python {
         display: flex;
       }
+    }
+  }
+  .contact {
+    .wrapper {
+      justify-content: flex-end;
+    }
+    &__body {
+      margin-bottom: 5rem;
     }
   }
 }

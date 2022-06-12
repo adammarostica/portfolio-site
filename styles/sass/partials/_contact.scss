@@ -1,6 +1,6 @@
 .contact {
   position: relative;
-  height: 300vh;
+  height: 250vh;
   background-color: $sandyYellow;
   text-align: center;
   animation: 1s fade-to-black ease-out forwards;
@@ -28,7 +28,7 @@
   }
   &__heading {
     font-family: $bowlby;
-    font-size: clamp(2.5rem, 11vw, 5rem);
+    font-size: clamp(2rem, 11vw, 5rem);
     color: $sandyYellow;
     margin-bottom: 2rem;
   }
@@ -95,6 +95,7 @@
     margin-bottom: 2rem;
   }
   &__body {
+    margin-top: 1rem;
     display: flex;
     gap: 10vw;
     justify-content: center;
@@ -121,16 +122,15 @@
     animation-play-state: paused;
     animation-delay: calc(var(--contactScroll) * -1s);
     &__link {
-      flex-basis: 30%;
+      flex-basis: 40%;
       text-align: center;
       text-decoration: none;
-      color: $offWhite;
       transition: transform .3s ease-out, color .3s ease-out;
       i {
         font-size: clamp(1rem, 6vw, 3rem);
         margin-bottom: 1rem;
       }
-      &:hover {
+      &:hover, &:focus {
         transform: scale(1.1);
         color: $sandyYellow;
       }

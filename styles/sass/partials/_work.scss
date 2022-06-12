@@ -1,10 +1,10 @@
-.works {
+.work {
   height: 200vh;
   background: $offBlack;
   position: relative;
   &__scroll {
     position: absolute;
-    bottom: 0;
+    top: 50%;
     width: 1px;
     height: 1px;
   }
@@ -61,9 +61,9 @@
     &__W {
       top: 35%;
       left: -80%;
-      animation: 1s works__letter__W ease-out forwards;
+      animation: 1s work__letter__W ease-out forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--worksScroll) * -1s);
+      animation-delay: calc(var(--workScroll) * -1s);
     }
     &__O {
       color: transparent;
@@ -71,16 +71,16 @@
     &__R {
       top: -30%;
       left: 60%;
-      animation: 1s works__letter__R ease-out forwards;
+      animation: 1s work__letter__R ease-out forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--worksScroll) * -1s);
+      animation-delay: calc(var(--workScroll) * -1s);
     }
     &__K {
       top: 35%;
       left: 115%;
-      animation: 1s works__letter__K ease-out forwards;
+      animation: 1s work__letter__K ease-out forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--worksScroll) * -1s);
+      animation-delay: calc(var(--workScroll) * -1s);
     }
   }
   &__circle {
@@ -91,23 +91,23 @@
     transform: translateX(-50%) translateY(-50%);
     &__1 {
       background-color: $sandyYellow;
-      animation: 1s works__circle__1 ease-in-out forwards;
+      animation: 1s work__circle__1 ease-in-out forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--worksScroll) * -1s);
+      animation-delay: calc(var(--workScroll) * -1s);
     }
     &__2 {
       background-color: $offBlack;
       transform: translateX(-50%) translateY(-50%);
-      animation: 1s works__circle__2 ease-in-out forwards;
+      animation: 1s work__circle__2 ease-in-out forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--worksScroll) * -1s);
+      animation-delay: calc(var(--workScroll) * -1s);
     }
     &__3 {
       background-color: $sandyYellow;
       transform: translateX(-50%) translateY(-50%);
-      animation: 1s works__circle__3 ease-in-out forwards;
+      animation: 1s work__circle__3 ease-in-out forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--worksScroll) * -1s);
+      animation-delay: calc(var(--workScroll) * -1s);
       border-radius: 45% 45% 45% 45% / 42% 42% 42% 42%;
     }
   }
@@ -126,7 +126,7 @@
     transform: translateX(-50%) translateY(-50%);
     animation: 1s work__tools ease-out forwards;
     animation-play-state: paused;
-    animation-delay: calc(var(--worksScroll) * -1s);
+    animation-delay: calc(var(--workScroll) * -1s);
   }
   &__tool {
     position: relative;
@@ -138,7 +138,7 @@
     z-index: 20;
     transition: color .3s ease-out;
     i {
-      font-size: clamp(3rem, 10vw, 5rem);
+      font-size: 3rem;
     }
     p {
       margin-top: .5rem;

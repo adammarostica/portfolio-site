@@ -26,15 +26,15 @@ function throttle(cb, delay = 1000) {
 
 const header = document.getElementById('header');
 const about = document.getElementById('aboutIntersection');
-const works = document.getElementById('workIntersection');
-const projects = document.getElementById('projectsIntersection');
+const work = document.getElementById('workIntersection');
+const projects = document.getElementById('projects');
 const contact = document.getElementById('contactIntersection');
 let newIntersection = null;
 const sections = {
   header: checkHeaderScroll,
   aboutIntersection: throttle(checkAboutScroll, 50),
-  workIntersection: throttle(checkWorksScroll, 50),
-  projectsIntersection: throttle(checkProjectsScroll, 50),
+  workIntersection: throttle(checkWorkScroll, 50),
+  projects: throttle(checkProjectsScroll, 50),
   contactIntersection: throttle(checkContactScroll, 50),
 };
 
@@ -52,11 +52,11 @@ function checkAboutScroll() {
   // console.log(document.documentElement.style);
 }
 
-function checkWorksScroll() {
-  const { top, height } = works.getBoundingClientRect();
+function checkWorkScroll() {
+  const { top, height } = work.getBoundingClientRect();
   scrollDistance = -top;
   document.documentElement.style.setProperty(
-    `--worksScroll`,
+    `--workScroll`,
     scrollDistance / (height - document.documentElement.clientHeight)
   );
 }
@@ -94,7 +94,7 @@ const observer = new IntersectionObserver((entries) => {
 }, {});
 
 // Observes the entry of new sections into viewport
-[header, about, projects, works, contact].forEach((section) => {
+[header, about, projects, work, contact].forEach((section) => {
   observer.observe(section);
 });
 
