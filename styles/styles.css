@@ -1586,6 +1586,8 @@ header .wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transform: translateZ(-1px);
+          transform: translateZ(-1px);
 }
 .intro__avatar {
   position: relative;

@@ -114,6 +114,7 @@ header {
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  transform: translateZ(-1px);
   &__avatar {
     position: relative;
     flex-basis: 70%;
