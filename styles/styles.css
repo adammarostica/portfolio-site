@@ -1514,6 +1514,8 @@ header .wrapper {
   height: 3rem;
   cursor: pointer;
   z-index: 99;
+  -webkit-transform: translateZ(2px);
+          transform: translateZ(2px);
 }
 .burger__container {
   width: 3rem;

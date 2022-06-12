@@ -60,6 +60,7 @@ header {
     height: 3rem;
     cursor: pointer;
     z-index: 99;
+    transform: translateZ(2px);
   }
   &__container {
     width: 3rem;
