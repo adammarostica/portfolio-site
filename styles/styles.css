@@ -252,6 +252,7 @@ p {
 
 html {
   scroll-behavior: smooth;
+  background-color: #292a32;
 }
 
 .wrapper {
