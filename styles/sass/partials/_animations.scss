@@ -89,7 +89,6 @@
   60%, 87% {
     opacity: 1;
     transform: rotateY(360deg);
-    rotateY: 360deg;
   }
   
   100% {
@@ -117,15 +116,15 @@
 
 @keyframes about__image {
   0% {
-    transform: rotateX(90deg);
+    transform: rotateX(90deg) translateZ(-1000px);
   }
 
   15%, 85% {
-    transform: rotateX(0deg);
+    transform: rotateX(0deg) translateZ(-1000px);
   }
 
   100% {
-    transform: rotate(180deg) scale(0);
+    transform: rotate(180deg) scale(0.1) translateZ(-1000px);
   }
 }
 
