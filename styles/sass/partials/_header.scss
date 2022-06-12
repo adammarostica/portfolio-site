@@ -45,7 +45,7 @@ header {
       }
     }
     &--visible {
-      transform: translateY(-3rem);
+      transform: translateY(-3rem) translateZ(1px);
     }
   }
 }

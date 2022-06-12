@@ -1494,8 +1494,8 @@ header .wrapper {
   color: #F5C4F9;
 }
 .nav__list--visible {
-  -webkit-transform: translateY(-3rem);
-          transform: translateY(-3rem);
+  -webkit-transform: translateY(-3rem) translateZ(1px);
+          transform: translateY(-3rem) translateZ(1px);
 }
 
 .burger__menu {
