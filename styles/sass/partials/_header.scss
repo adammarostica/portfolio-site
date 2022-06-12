@@ -24,8 +24,12 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translateY(-50vw);
+    transform: translateY(-15rem);
     transition: transform 0.4s ease-out;
+    background-color: $offBlack;
+    padding: 1rem 0;
+    border-radius: 0 0 20px 20px;
+    z-index: 98;
     &__item {
       transition: transform .3s ease-out;
       margin: .3rem;
@@ -41,11 +45,10 @@ header {
       }
     }
     &--visible {
-      transform: translateY(-2.5rem);
+      transform: translateY(-3rem);
     }
   }
 }
-
 
 .burger {
   &__menu {
@@ -53,13 +56,14 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    width: 15vw;
-    height: 15vw;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
+    z-index: 99;
   }
   &__container {
-    width: 15vw;
-    height: 15vw;
+    width: 3rem;
+    height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,101 +87,27 @@ header {
 .burger__menu {
   &--x {
     .burger__top {
-      animation: burgerTopChange .6s ease-out forwards;
+      animation: burger__top--change .6s ease-out forwards;
     }
     .burger__mid {
-      animation: burgerMidChange .6s ease-out forwards;
+      animation: burger__mid--change .6s ease-out forwards;
     }
     .burger__btm {
-      animation: burgerBtmChange .6s ease-out forwards;
+      animation: burger__btm--change .6s ease-out forwards;
     }
   }
   &--burger {
     .burger__top {
-      animation: burgerTopRevert .6s ease-out forwards;
+      animation: burger__top--revert .6s ease-out forwards;
     }
     .burger__mid {
-      animation: burgerMidRevert .3s ease-out forwards;
+      animation: burger__mid--revert .3s ease-out forwards;
     }
     .burger__btm {
-      animation: burgerBtmRevert .6s ease-out forwards;
+      animation: burger__btm--revert .6s ease-out forwards;
     }
   }
 }
-
-
-@keyframes burgerTopChange {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(10px) rotate(45deg);
-  }
-}
-
-@keyframes burgerTopRevert {
-  0% {
-    transform: translateY(10px) rotate(45deg);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes burgerMidChange {
-  0% {}
-  49% {
-    width: 30px;
-  }
-  50%, 100% {
-    width: 0px;
-  }
-}
-
-@keyframes burgerMidRevert {
-  0% {
-    width: 0px;
-  }
-  50% {
-    width: 0px; 
-  }
-  51%, 100% {}
-}
-
-@keyframes burgerBtmChange {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-9px);
-  }
-  100% {
-    transform: translateY(-9px) rotate(-45deg);
-  }
-}
-
-@keyframes burgerBtmRevert {
-  0% {
-    transform: translateY(-9px) rotate(-45deg);
-  }
-  50% {
-    transform: translateY(-9px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-
-
-
-
 
 .intro {
   display: flex;
@@ -257,16 +187,10 @@ header {
 
 .fa-circle-chevron-down {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   color: $steelPink;
   font-size: 2rem;
   animation: 1s chevron-bounce ease-in-out alternate infinite;
-}
-
-@keyframes chevron-bounce {
-  100% {
-    transform: translate3d(-20px, -10px, 0);
-  }
 }
