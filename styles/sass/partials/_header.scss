@@ -45,7 +45,7 @@ header {
       }
     }
     &--visible {
-      transform: translateY(-3rem) translateZ(1px);
+      transform: translateY(-4rem) translateZ(1px);
     }
   }
 }
@@ -56,15 +56,15 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     cursor: pointer;
     z-index: 99;
     transform: translateZ(2px);
   }
   &__container {
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;

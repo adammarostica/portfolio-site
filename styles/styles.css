@@ -1495,8 +1495,8 @@ header .wrapper {
   color: #F5C4F9;
 }
 .nav__list--visible {
-  -webkit-transform: translateY(-3rem) translateZ(1px);
-          transform: translateY(-3rem) translateZ(1px);
+  -webkit-transform: translateY(-4rem) translateZ(1px);
+          transform: translateY(-4rem) translateZ(1px);
 }
 
 .burger__menu {
@@ -1511,16 +1511,16 @@ header .wrapper {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   cursor: pointer;
   z-index: 99;
   -webkit-transform: translateZ(2px);
           transform: translateZ(2px);
 }
 .burger__container {
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
