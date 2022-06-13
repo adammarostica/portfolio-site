@@ -2,7 +2,6 @@
   background-color: $offBlack;
   color: $offWhite;
   overflow: hidden;
-  padding: 1rem 0 5rem;
   h2 {
     text-align: center;
     font-family: $bowlby;
@@ -23,6 +22,8 @@
   align-items: center;
   margin-bottom: 5rem;
   &__text {
+    display: flex;
+    flex-direction: column;
     &__1 {
       animation: 1s project__text__1 ease-out forwards;
       animation-play-state: paused;
@@ -39,7 +40,7 @@
       opacity: 0;
       animation: 1s project__text__3 ease-in forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--projectsScroll) * -.7s);
+      animation-delay: calc(var(--projectsScroll) * -.8s);
     }
     &__4 {
       transform: translateX(20vw);
@@ -47,7 +48,19 @@
       opacity: 0;
       animation: 1s project__text__4 ease-in forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--projectsScroll) * -.7s);
+      animation-delay: calc(var(--projectsScroll) * -.8s);
+    }
+  }
+  &__links {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: .7rem;
+    a {
+      padding: .3rem .5rem .2rem;
+      border-radius: 5px;
+      background-color: $sandyYellow;
+      color: $offBlack;
+      cursor: pointer;
     }
   }
   &__img {
@@ -71,13 +84,13 @@
         transform: translateX(-50vw);
         animation: 1s project__3 ease-in forwards;
         animation-play-state: paused;
-        animation-delay: calc(var(--projectsScroll) * -.7s);  
+        animation-delay: calc(var(--projectsScroll) * -.8s);  
       }
       &__4 {
         transform: translateX(50vw);
         animation: 1s project__4 ease-in forwards;
         animation-play-state: paused;
-        animation-delay: calc(var(--projectsScroll) * -.7s);  
+        animation-delay: calc(var(--projectsScroll) * -.8s);  
       }
     }
     &__shadow {
@@ -100,13 +113,13 @@
         transform: translateX(-50vw) translateY(-94%);
         animation: 1s project__shadow__3 ease-in forwards;
         animation-play-state: paused;
-        animation-delay: calc(var(--projectsScroll) * -.7s);
+        animation-delay: calc(var(--projectsScroll) * -.8s);
       }
       &__4 {
         transform: translateX(50vw) translateY(-97%);
         animation: 1s project__shadow__4 ease-in forwards;
         animation-play-state: paused;
-        animation-delay: calc(var(--projectsScroll) * -.7s);
+        animation-delay: calc(var(--projectsScroll) * -.8s);
       }
     }
   }
