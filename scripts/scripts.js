@@ -6,7 +6,6 @@ const work = document.getElementById('workIntersection');
 const projects = document.getElementById('projects');
 const contact = document.getElementById('contactIntersection');
 const sections = {
-  header: checkHeaderScroll,
   aboutIntersection: throttle(checkAboutScroll, 50),
   workIntersection: throttle(checkWorkScroll, 50),
   projects: throttle(checkProjectsScroll, 50),
@@ -48,10 +47,6 @@ function throttle(cb, delay = 1000) {
 
     setTimeout(timeoutFunc, delay);
   };
-}
-
-function checkHeaderScroll() {
-  // A stub. Not sure if the header section needs a scroll yet, but this function needs to exist for the IntersectionObserver to efficiently add and remove listeners to and from other sections
 }
 
 function checkAboutScroll() {
@@ -104,6 +99,10 @@ const observer = new IntersectionObserver((entries) => {
 }, {});
 
 // Observes the entry of new sections into viewport
-[header, about, projects, work, contact].forEach((section) => {
+[about, projects, work, contact].forEach((section) => {
   observer.observe(section);
+});
+
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
 });

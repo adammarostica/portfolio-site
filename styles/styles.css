@@ -1433,7 +1433,7 @@ header .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 101vh;
+  height: 100%;
   width: 70%;
   max-width: 800px;
 }
@@ -1470,7 +1470,7 @@ header .wrapper {
   transition: -webkit-transform 0.4s ease-out;
   transition: transform 0.4s ease-out;
   transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
-  background-color: #292a32;
+  background-color: rgba(41, 42, 50, 0.7);
   padding: 1rem 0;
   border-radius: 0 0 20px 20px;
   z-index: 98;
@@ -1489,7 +1489,6 @@ header .wrapper {
 .nav__list__link {
   -webkit-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
-  padding: 0.3rem;
 }
 .nav__list__link:hover, .nav__list__link:focus {
   color: #F5C4F9;
