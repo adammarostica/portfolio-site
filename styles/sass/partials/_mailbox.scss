@@ -1,7 +1,7 @@
 .mailbox {
   position: relative;
   background-color: transparent;
-  font-size: clamp(5px, .5vmax, 10px);
+  font-size: clamp(3px, .7vmax, 10px);
   width: 30em;
   aspect-ratio: 43/41;
 }
@@ -112,10 +112,23 @@
   height: 62%;
   right: 43%;
   bottom: 38%;
-  outline: .5em solid #da4453;
-  outline-offset: -1em;
-  transition: background-color .2s ease-out, transform .2s ease-out, height .2s ease-out, width .2s ease-out, border-radius .2s cubic-bezier(0,1,0,1), outline .2s ease-out;
+  // outline: .5em solid #da4453;
+  // outline-offset: -1em;
+  transition: background-color .2s ease-out, transform .2s ease-out, height .2s ease-out, width .2s ease-out, border-radius .2s cubic-bezier(0,1,0,1);
   transform-origin: bottom;
+}
+.mailbox__door::after {
+  content: '';
+  position: absolute;
+  width: 85%;
+  height: 90%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border-radius: 45% 45% 0% 0% / 30% 30% 0% 0%;
+  box-shadow: 0 0 0 .4em #da4453;
+  transition: box-shadow .2s ease-out;
 }
 
 .mailbox__door p {
@@ -124,11 +137,8 @@
   top: 35%;
   left: 45%;
   font-size: 5em;
-  // letter-spacing: .1em;
-  transform: translate(-50%) perspective(500px) rotateY(-20deg);
-  color: #eee;
-  // text-shadow: .05em .03em black;
-  transition: transform .2s ease-out;
+  transform: translate(-50%) rotateY(-20deg);
+  color: #333;
 }
 
 .contact__info:hover + .contact__img > .mailbox > .mailbox__door,
@@ -138,11 +148,17 @@
   background-color: #ed5565;
   border-radius: 100vmax 0 0 100vmax;
   outline: 3px solid #ed5565;
+  bottom: 39.5%;
+}
+
+.contact__info:hover + .contact__img > .mailbox > .mailbox__door::after,
+.mailbox.open .mailbox__door::after {
+  box-shadow: none;
 }
 
 .contact__info:hover + .contact__img > .mailbox > .mailbox__door p,
 .mailbox.open .mailbox__door p {
-  transform: rotateX(-90deg) translateX(-1em) translateZ(-.4em);
+  transform: rotateX(90deg) translateX(-1em) translateZ(.5em);
 }
 
 .mailbox__letter {

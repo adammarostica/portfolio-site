@@ -239,15 +239,15 @@ h1, h2, h3, p {
 }
 
 h1 {
-  font-size: clamp(2rem, 6vw, 3rem);
+  font-size: clamp(2rem, 6vw, 2.5rem);
 }
 
 h3 {
-  font-size: clamp(2rem, 6vw, 3rem);
+  font-size: clamp(2rem, 6vw, 2.5rem);
 }
 
 p {
-  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
 html {
@@ -1500,7 +1500,7 @@ header .wrapper {
           align-items: center;
   height: 100%;
   width: 70%;
-  max-width: 800px;
+  max-width: 600px;
 }
 
 .nav {
@@ -2383,6 +2383,8 @@ header .wrapper {
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 800px;
+  width: 95%;
+  margin: 0 auto;
 }
 .contact__heading {
   font-family: "Bowlby One", cursive;
@@ -2606,7 +2608,7 @@ footer {
 .mailbox {
   position: relative;
   background-color: transparent;
-  font-size: clamp(5px, 0.5vmax, 10px);
+  font-size: clamp(3px, 0.7vmax, 10px);
   width: 30em;
   aspect-ratio: 43/41;
 }
@@ -2728,14 +2730,31 @@ footer {
   height: 62%;
   right: 43%;
   bottom: 38%;
-  outline: 0.5em solid #da4453;
-  outline-offset: -1em;
-  -webkit-transition: background-color 0.2s ease-out, height 0.2s ease-out, width 0.2s ease-out, border-radius 0.2s cubic-bezier(0, 1, 0, 1), outline 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  transition: background-color 0.2s ease-out, height 0.2s ease-out, width 0.2s ease-out, border-radius 0.2s cubic-bezier(0, 1, 0, 1), outline 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  transition: background-color 0.2s ease-out, transform 0.2s ease-out, height 0.2s ease-out, width 0.2s ease-out, border-radius 0.2s cubic-bezier(0, 1, 0, 1), outline 0.2s ease-out;
-  transition: background-color 0.2s ease-out, transform 0.2s ease-out, height 0.2s ease-out, width 0.2s ease-out, border-radius 0.2s cubic-bezier(0, 1, 0, 1), outline 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -webkit-transition: background-color 0.2s ease-out, height 0.2s ease-out, width 0.2s ease-out, border-radius 0.2s cubic-bezier(0, 1, 0, 1), -webkit-transform 0.2s ease-out;
+  transition: background-color 0.2s ease-out, height 0.2s ease-out, width 0.2s ease-out, border-radius 0.2s cubic-bezier(0, 1, 0, 1), -webkit-transform 0.2s ease-out;
+  transition: background-color 0.2s ease-out, transform 0.2s ease-out, height 0.2s ease-out, width 0.2s ease-out, border-radius 0.2s cubic-bezier(0, 1, 0, 1);
+  transition: background-color 0.2s ease-out, transform 0.2s ease-out, height 0.2s ease-out, width 0.2s ease-out, border-radius 0.2s cubic-bezier(0, 1, 0, 1), -webkit-transform 0.2s ease-out;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
+}
+
+.mailbox__door::after {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 90%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: transparent;
+  border-radius: 45% 45% 0% 0%/30% 30% 0% 0%;
+  -webkit-box-shadow: 0 0 0 0.4em #da4453;
+          box-shadow: 0 0 0 0.4em #da4453;
+  -webkit-transition: -webkit-box-shadow 0.2s ease-out;
+  transition: -webkit-box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out;
+  transition: box-shadow 0.2s ease-out, -webkit-box-shadow 0.2s ease-out;
 }
 
 .mailbox__door p {
@@ -2744,13 +2763,9 @@ footer {
   top: 35%;
   left: 45%;
   font-size: 5em;
-  -webkit-transform: translate(-50%) perspective(500px) rotateY(-20deg);
-          transform: translate(-50%) perspective(500px) rotateY(-20deg);
-  color: #eee;
-  -webkit-transition: -webkit-transform 0.2s ease-out;
-  transition: -webkit-transform 0.2s ease-out;
-  transition: transform 0.2s ease-out;
-  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -webkit-transform: translate(-50%) rotateY(-20deg);
+          transform: translate(-50%) rotateY(-20deg);
+  color: #333;
 }
 
 .contact__info:hover + .contact__img > .mailbox > .mailbox__door,
@@ -2760,12 +2775,19 @@ footer {
   background-color: #ed5565;
   border-radius: 100vmax 0 0 100vmax;
   outline: 3px solid #ed5565;
+  bottom: 39.5%;
+}
+
+.contact__info:hover + .contact__img > .mailbox > .mailbox__door::after,
+.mailbox.open .mailbox__door::after {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .contact__info:hover + .contact__img > .mailbox > .mailbox__door p,
 .mailbox.open .mailbox__door p {
-  -webkit-transform: rotateX(-90deg) translateX(-1em) translateZ(-0.4em);
-          transform: rotateX(-90deg) translateX(-1em) translateZ(-0.4em);
+  -webkit-transform: rotateX(90deg) translateX(-1em) translateZ(0.5em);
+          transform: rotateX(90deg) translateX(-1em) translateZ(0.5em);
 }
 
 .mailbox__letter {
@@ -2851,7 +2873,7 @@ footer {
             transform: none;
   }
   .nav__list__link {
-    padding: 1rem min(2vw, 1.5rem);
+    padding: 1rem min(1vw, 1rem);
   }
   .burger__menu {
     display: none;
@@ -2881,7 +2903,10 @@ footer {
     display: block;
   }
   .intro__letter {
-    font-size: clamp(2.5rem, 17vw, 8rem);
+    font-size: clamp(2.5rem, 17vw, 6rem);
+  }
+  .contact .wrapper {
+    width: 80%;
   }
 }
 @media (min-width: 769px) {
@@ -2926,8 +2951,5 @@ footer {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-  }
-  .contact__body {
-    margin-bottom: 5rem;
   }
 }

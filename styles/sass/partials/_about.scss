@@ -113,6 +113,9 @@
     animation: 1s about__text ease-out forwards;
     animation-play-state: paused;
     animation-delay: calc(var(--aboutScroll) * -.7s);
+    // p {
+    //   font-size: clamp(1rem, 3vw, 1.2rem);
+    // }
     p:first-of-type {
       margin-bottom: 1rem;
     }

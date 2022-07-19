@@ -9,7 +9,7 @@ header {
     align-items: center;
     height: 100%;
     width: 70%;
-    max-width: 800px;
+    max-width: 600px;
   }
 }
 
@@ -39,7 +39,6 @@ header {
     }
     &__link {
       transition: color .3s ease-out;
-      // padding: .3rem;
       &:hover, &:focus {
         color: $lightLilac;
       }

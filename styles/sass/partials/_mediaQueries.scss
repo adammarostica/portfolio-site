@@ -31,13 +31,13 @@
       flex-direction: row;
       transform: none;
       &__link {
-        padding: 1rem min(2vw, 1.5rem);
+        padding: 1rem min(1vw, 1rem);
       }
     }
   }
   .burger__menu {
     display: none;
-  }  
+  }
 }
 
 @media (min-width: 539px) {
@@ -60,7 +60,12 @@
       }
     }
     &__letter {
-      font-size: clamp(2.5rem, 17vw, 8rem);
+      font-size: clamp(2.5rem, 17vw, 6rem);
+    }
+  }
+  .contact {
+    .wrapper {
+      width: 80%;
     }
   }
 }
@@ -96,9 +101,6 @@
   .contact {
     .wrapper {
       justify-content: flex-end;
-    }
-    &__body {
-      margin-bottom: 5rem;
     }
   }
 }
