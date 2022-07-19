@@ -1,5 +1,5 @@
 header {
-  background-image: linear-gradient(#66136C, #3C2189);
+  background-color: $darkPurple;
   min-height: 101vh;
   display: flex;
   align-items: center;
@@ -188,11 +188,20 @@ header {
 }
 
 .fa-circle-chevron-down {
+  z-index: 999;
   position: absolute;
   bottom: 1rem;
   left: 50%;
+  outline-offset: 4px;
   transform: translateX(-50%);
   color: $steelPink;
   font-size: 2rem;
+  transition: color .2s ease-out;
   animation: 1s chevron-bounce ease-in-out alternate infinite;
+  cursor: pointer;
+}
+
+.fa-circle-chevron-down:hover,
+.fa-circle-chevron-down:focus {
+  color: lighten($steelPink, 10%);
 }

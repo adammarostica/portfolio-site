@@ -34,8 +34,17 @@
     animation: 1s about__image 1s ease-out forwards;
     animation-play-state: paused;
     animation-delay: calc(var(--aboutScroll) * -.8s);
-    transform: rotateX(90deg);
     z-index: 0;
+    &__cover {
+      inset: 0;
+      background-color: $darkPurple;
+      position: absolute;
+      width: 101%;
+      height: 100%;
+      animation: 1s about__image__cover 1s ease-out forwards;
+      animation-play-state: paused;
+      animation-delay: calc(var(--headerScroll) * -1s);
+    }
   }
   &__span {
     font-family: $bowlby;
@@ -89,7 +98,7 @@
   &__background {
     position: absolute;
     inset: 0;
-    background-color: #3C2189;
+    background-color: $darkPurple;
     animation: 1s about__background ease-in-out forwards;
     animation-play-state: paused;
     animation-delay: calc(var(--aboutScroll) * -1s);  
@@ -98,11 +107,14 @@
   &__text {
     margin: 30px 0;
     text-align: left;
-    width: 65%;
+    width: 90%;
     opacity: 0;
     z-index: 1;
     animation: 1s about__text ease-out forwards;
     animation-play-state: paused;
-    animation-delay: calc(var(--aboutScroll) * -1s);
+    animation-delay: calc(var(--aboutScroll) * -.7s);
+    p:first-of-type {
+      margin-bottom: 1rem;
+    }
   }
 }

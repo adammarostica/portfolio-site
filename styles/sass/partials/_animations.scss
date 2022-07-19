@@ -110,12 +110,12 @@
 }
 
 @keyframes about__A {
-  0%, 15% {
+  0% {
     transform: scale(0, 0);
     scale: 0
   }
   
-  50%, 75% {
+  30%, 75% {
     transform: scale(1, 1);
     scale: 1;
   }
@@ -127,11 +127,11 @@
 }
 
 @keyframes about__B {
-  0%, 15% {
+  0% {
     transform: translateX(var(--translateX));
   }
 
-  60%, 79% {
+  35%, 79% {
     transform: translateX(0);
   }
 
@@ -141,11 +141,11 @@
 }
 
 @keyframes about__O {
-  0%, 15% {
+  0% {
     transform: translateX(var(--translateX));
   }
 
-  60%, 83% {
+  40%, 83% {
     transform: translateX(0);
   }
   
@@ -155,12 +155,12 @@
 }
 
 @keyframes about__U {
-  0%, 15% {
+  0% {
     opacity: 0;
     transform: rotateY(90deg);
   }
 
-  60%, 87% {
+  45%, 87% {
     opacity: 1;
     transform: rotateY(0deg);
   }
@@ -172,12 +172,12 @@
 }
 
 @keyframes about__T {
-  0%, 25% {
+  0%, 10% {
     transform: scale(0, 0);
     scale: 0
   }
   
-  60%, 91% {
+  50%, 91% {
     transform: scale(1, 1);
     scale: 1;
   }
@@ -189,16 +189,22 @@
 }
 
 @keyframes about__image {
-  0% {
-    transform: rotateX(90deg) translateZ(-1000px);
-  }
-
-  15%, 85% {
+  0%, 85% {
     transform: rotateX(0deg) translateZ(-1000px);
   }
 
   100% {
     transform: rotate(180deg) scale(0.1) translateZ(-1000px);
+  }
+}
+
+@keyframes about__image__cover {
+  0%, 40% {
+    height: 110%;
+  }
+
+  100% {
+    height: 0;
   }
 }
 
@@ -235,9 +241,14 @@
     opacity: 0;
   }
 
-  70%, 100% {
+  50%, 80% {
     transform: translateX(0);
     opacity: 1;
+  }
+
+  100% {
+    transform: translateX(50%);
+    opacity: 0;
   }
 }
 
@@ -369,7 +380,7 @@
   }
 }
 
-@keyframes work__circle__1 {
+@keyframes tools__circle__1 {
   0% {
     width: 0vw;
     height: 0vw;
@@ -382,7 +393,7 @@
   }
 }
 
-@keyframes work__circle__2 {
+@keyframes tools__circle__2 {
   0%,
   15% {
     width: 0vw;
@@ -391,12 +402,12 @@
 
   70%,
   100% {
-    width: clamp(2rem, 11.5vw, 6.5rem);
-    height: clamp(2rem, 11.5vw, 6.5rem);
+    width: clamp(2rem, 11.9vw, 6.5rem);
+    height: clamp(2rem, 11.9vw, 6.5rem);
   }
 }
 
-@keyframes work__circle__3 {
+@keyframes tools__circle__3 {
   0%,
   60% {
     width: 0vw;
@@ -410,25 +421,31 @@
   }
 }
 
-@keyframes work__letter__W {
+@keyframes tools__letter__T {
   100% {
-    left: 20%;
+    left: 10%;
   }
 }
 
-@keyframes work__letter__R {
+@keyframes tools__letter__O2 {
   100% {
     top: 35%;
   }
 }
 
-@keyframes work__letter__K {
+@keyframes tools__letter__L {
   100% {
-    left: 80%;
+    top: 35%;
   }
 }
 
-@keyframes work__tools {
+@keyframes tools__letter__S {
+  100% {
+    left: 90%;
+  }
+}
+
+@keyframes tools__tools {
   100% {
     top: 65%;
   }
@@ -438,7 +455,7 @@
   0% {
     background-color: $sandyYellow;
   }
-  20%, 100% {
+  80%, 100% {
     background-color: $offBlack;
   }
 }
@@ -531,6 +548,27 @@
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes dummy__mailbox__1 {
+  0%, 40% {
+    width: 10vmin;
+    left: 130%;
+  }
+  100% {
+    widht: 20vmin;
+    top: 20%;
+    left: -30%;
+  }
+}
+
+@keyframes dummy__mailbox__2 {
+  0% {
+    left: -30%;
+  }
+  50%, 100% {
+    left: 130%;
   }
 }
 

@@ -2,26 +2,19 @@ const burger = document.getElementById('burger__menu');
 const navList = document.getElementById('nav__list');
 const header = document.getElementById('header');
 const about = document.getElementById('aboutIntersection');
-const work = document.getElementById('workIntersection');
-const projects = document.getElementById('projects');
+const projects = document.getElementById('projectsIntersection');
+const tools = document.getElementById('toolsIntersection');
 const contact = document.getElementById('contactIntersection');
+const upArrow = document.getElementById('upNavigator')
+const downArrow = document.getElementById('downNavigator')
 const sections = {
-  aboutIntersection: throttle(checkAboutScroll, 50),
-  workIntersection: throttle(checkWorkScroll, 50),
-  projects: throttle(checkProjectsScroll, 50),
-  contactIntersection: throttle(checkContactScroll, 50),
+  header: throttle(checkHeaderScroll, 10),
+  aboutIntersection: throttle(checkAboutScroll, 10),
+  toolsIntersection: throttle(checkToolsScroll, 10),
+  projectsIntersection: throttle(checkProjectsScroll, 10),
+  contactIntersection: throttle(checkContactScroll, 10),
 };
 
-burger.addEventListener('click', function() {
-  if (this.classList.contains('burger__menu--x')) {
-    this.classList.replace('burger__menu--x', 'burger__menu--burger');
-  } else if (this.classList.contains('burger__menu--burger')) {
-    this.classList.replace('burger__menu--burger', 'burger__menu--x');
-  } else {
-    this.classList.add('burger__menu--x');
-  }
-  navList.classList.toggle('nav__list--visible');
-});
 
 function throttle(cb, delay = 1000) {
   let shouldWait = false;
@@ -35,18 +28,38 @@ function throttle(cb, delay = 1000) {
       setTimeout(timeoutFunc, delay);
     }
   };
-
+  
   return (...args) => {
     if (shouldWait) {
       waitingArgs = args;
       return;
     }
-
+    
     cb(...args);
     shouldWait = true;
-
+    
     setTimeout(timeoutFunc, delay);
   };
+}
+
+burger.addEventListener('click', function() {
+  if (this.classList.contains('burger__menu--x')) {
+    this.classList.replace('burger__menu--x', 'burger__menu--burger');
+  } else if (this.classList.contains('burger__menu--burger')) {
+    this.classList.replace('burger__menu--burger', 'burger__menu--x');
+  } else {
+    this.classList.add('burger__menu--x');
+  }
+  navList.classList.toggle('nav__list--visible');
+});
+
+function checkHeaderScroll() {
+  const { top, height } = header.getBoundingClientRect();
+  scrollDistance = -top;
+  document.documentElement.style.setProperty(
+    `--headerScroll`,
+    scrollDistance / (height - document.documentElement.clientHeight) / 100
+  );
 }
 
 function checkAboutScroll() {
@@ -58,11 +71,11 @@ function checkAboutScroll() {
   );
 }
 
-function checkWorkScroll() {
-  const { top, height } = work.getBoundingClientRect();
+function checkToolsScroll() {
+  const { top, height } = tools.getBoundingClientRect();
   scrollDistance = -top;
   document.documentElement.style.setProperty(
-    `--workScroll`,
+    `--toolsScroll`,
     scrollDistance / (height - document.documentElement.clientHeight)
   );
 }
@@ -91,7 +104,7 @@ const observer = new IntersectionObserver((entries) => {
     const section = entry.target.id;
     if (entry.isIntersecting) {
       addEventListener("scroll", sections[section]);
-    }
+  }
     if (!entry.isIntersecting) {
       removeEventListener("scroll", sections[section]);
     }
@@ -99,10 +112,18 @@ const observer = new IntersectionObserver((entries) => {
 }, {});
 
 // Observes the entry of new sections into viewport
-[about, projects, work, contact].forEach((section) => {
+[header, about, projects, tools, contact].forEach((section) => {
   observer.observe(section);
 });
+
 
 window.addEventListener('load', () => {
   window.scrollTo(0, 0);
 });
+
+// Click to open mailbox
+// const mailbox = document.getElementById('mailbox');
+
+// mailbox.addEventListener('click', function() {
+//   this.classList.toggle('open');
+// })

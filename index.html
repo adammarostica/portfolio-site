@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Josefin+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Josefin+Sans&family=Square+Peg&display=swap"
       rel="stylesheet"
     />
     <link
@@ -70,7 +70,14 @@
           </div>
         </div>
       </div>
-      <i class="fa-solid fa-circle-chevron-down"></i>
+      <!-- <i id="upNavigator" class="fa-solid fa-circle-chevron-up up-navigator" tabindex="0"></i> -->
+      <a href="#about"
+        ><i
+          id="downNavigator"
+          class="fa-solid fa-circle-chevron-down down-navigator"
+          tabindex="0"
+        ></i
+      ></a>
     </header>
     <main>
       <section class="about" id="aboutIntersection">
@@ -90,13 +97,16 @@
                 class="about__image"
                 loading="lazy"
               />
-              <div class="about__transparecy"></div>
+              <div class="about__image__cover"></div>
             </div>
             <div class="about__text">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti nostrum, voluptates consequuntur inventore at quidem
-                delectus eum ab minus deleniti.
+                I've developed board games, designed their rulebooks, lead teams, and even performed in operas. I enjoy channeling my creativity to craft innovative solutions to
+                complex problems and design intuitive user experiences that are as enjoyable to use as they are to look at. And as a strong communicator who thrives in collaborative environments, I am eager to exchange ideas and
+                cooperate to make something great, and then make it even better.
+              </p>
+              <p>
+                Outside of work, I spend my time singing, cooking, disc golfing, playing board and video games, and getting out into nature with my wife, Jordy, and dog, Jake.
               </p>
             </div>
             <div class="about__background"></div>
@@ -104,8 +114,8 @@
         </div>
         <div class="about__scroll" id="about"></div>
       </section>
-      <section class="projects" id="projects">
-        <div class="projects__container">
+      <section class="projects" id="projectsIntersection">
+        <div class="projects__container" id="projects">
           <div class="wrapper">
             <h2>PROJECTS</h2>
             <div class="project">
@@ -137,12 +147,13 @@
             </div>
             <div class="project">
               <div class="project__text project__text__2">
-                <p>
-                  A pixel perfect rendition of a multi-page website
-                </p>
+                <p>A pixel perfect rendition of a multi-page website</p>
                 <div class="project__links">
                   <a href="https://barone.adammarostica.com">Live</a>
-                  <a href="https://github.com/adammarostica/adam-marostica-project-one">Repo</a>
+                  <a
+                    href="https://github.com/adammarostica/adam-marostica-project-one"
+                    >Repo</a
+                  >
                 </div>
               </div>
               <div class="project__img">
@@ -189,9 +200,7 @@
             </div>
             <div class="project">
               <div class="project__text project__text__4">
-                <p>
-                  A pixel perfect rendition of a multi-page website
-                </p>
+                <p>A pixel perfect rendition of a multi-page website</p>
                 <div class="project__links">
                   <a>Live</a>
                   <a>Repo</a>
@@ -215,67 +224,67 @@
           </div>
         </div>
       </section>
-      <section class="work" id="workIntersection">
-        <div class="work__container">
+      <section class="tools" id="toolsIntersection">
+        <div class="tools__container">
           <div class="wrapper">
-            <h2 class="work__heading">
-              <span class="work__word work__word__how">How</span>
-              <span class="work__word work__word__I">I</span>
-              <span class="work__word work__word__do">Do</span>
-              <span class="work__word work__word__my">My</span>
-              <span class="work__letter work__letter__W">W</span>
-              <span class="work__letter work__letter__O sr-only">O</span>
-              <span class="work__letter work__letter__R">R</span>
-              <span class="work__letter work__letter__K">K</span>
-              <span class="work__circle work__circle__1"></span>
-              <span class="work__circle work__circle__2"></span>
-              <span class="work__circle work__circle__3"></span>
+            <h2 class="tools__heading">
+              <span class="tools__word tools__word__these">These</span>
+              <span class="tools__word tools__word__are">Are</span>
+              <span class="tools__word tools__word__my">My</span>
+              <span class="tools__letter tools__letter__T">T</span>
+              <span class="tools__letter tools__letter__O sr-only">O</span>
+              <span class="tools__letter tools__letter__O2">O</span>
+              <span class="tools__letter tools__letter__L">L</span>
+              <span class="tools__letter tools__letter__S">S</span>
+              <span class="tools__circle tools__circle__1"></span>
+              <span class="tools__circle tools__circle__2"></span>
+              <span class="tools__circle tools__circle__3"></span>
             </h2>
-            <ul class="work__tools">
-              <li class="work__tool work__tool__html5">
+            <ul class="stack__tools">
+              <li class="stack__tool stack__tool__html5">
                 <i class="devicon-html5-plain"></i>
                 <p>HTML5</p>
               </li>
-              <li class="work__tool work__tool__css3">
+              <li class="stack__tool stack__tool__css3">
                 <i class="devicon-css3-plain"></i>
                 <p>CSS3</p>
               </li>
-              <li class="work__tool work__tool__javascript">
+              <li class="stack__tool stack__tool__javascript">
                 <i class="devicon-javascript-plain"></i>
                 <p>JavaScript</p>
               </li>
-              <li class="work__tool work__tool__git">
+              <li class="stack__tool stack__tool__git">
                 <i class="devicon-git-plain"></i>
                 <p>Git</p>
               </li>
-              <li class="work__tool work__tool__react">
+              <li class="stack__tool stack__tool__react">
                 <i class="devicon-react-original"></i>
                 <p>React</p>
               </li>
-              <li class="work__tool work__tool__jquery">
+              <li class="stack__tool stack__tool__jquery">
                 <i class="devicon-jquery-plain"></i>
                 <p>jQuery</p>
               </li>
-              <li class="work__tool work__tool__firebase">
+              <li class="stack__tool stack__tool__firebase">
                 <i class="devicon-firebase-plain"></i>
                 <p>Firebase</p>
               </li>
-              <li class="work__tool work__tool__sass">
+              <li class="stack__tool stack__tool__sass">
                 <i class="devicon-sass-original"></i>
                 <p>Sass</p>
               </li>
-              <li class="work__tool work__tool__python">
+              <li class="stack__tool stack__tool__python">
                 <i class="devicon-python-plain"></i>
                 <p>Python</p>
               </li>
-              <li class="work__tool work__tool__gimp">
+              <li class="stack__tool stack__tool__gimp">
                 <i class="devicon-gimp-plain"></i>
                 <p>Gimp</p>
               </li>
             </ul>
           </div>
         </div>
-        <div class="work__scroll" id="work"></div>
+        <div class="tools__scroll" id="tools"></div>
       </section>
 
       <section class="contact" id="contactIntersection">
@@ -323,9 +332,32 @@
                 </a>
               </div>
               <div class="contact__img">
+                <div id="mailbox" class="mailbox">
+                  <div class="mailbox__interior"></div>
+                  <div class="mailbox__exterior"></div>
+                  <div class="mailbox__flag">
+                    <div class="mailbox__flag__circle"></div>
+                    <div class="mailbox__flag__flag"></div>
+                    <div class="mailbox__flag__beam"></div>
+                  </div>
+                  <div class="mailbox__door">
+                    <p>Adam</p>    
+                  </div>
+                  <div class="mailbox__letter"></div>
+                  <div class="mailbox__post"></div>
+                </div>
+              </div>
+              <div class="dummy__mailbox__1">
                 <img
                   src="./assets/mailbox.png"
                   alt="An illustration of a mailbox by Nikita Golubev"
+                  title="Illustrated by Nikita Golubev - Flaticon"
+                />
+              </div>
+              <div class="dummy__mailbox__2">
+                <img
+                  src="./assets/reverse-mailbox.png"
+                  alt="An illustration of a mailbox by Nikita Golubev doctored by me"
                   title="Illustrated by Nikita Golubev - Flaticon"
                 />
               </div>
@@ -334,10 +366,10 @@
         </div>
         <div class="contact__scroll" id="contact"></div>
       </section>
-      <footer>
-        <p>Made by ☕ and Adam</p>
-      </footer>
     </main>
+    <footer>
+      <p>Made by ☕ and Adam</p>
+    </footer>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.4/underscore-min.js"

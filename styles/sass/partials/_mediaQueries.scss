@@ -59,6 +59,9 @@
         display: block;
       }
     }
+    &__letter {
+      font-size: clamp(2.5rem, 17vw, 8rem);
+    }
   }
 }
 

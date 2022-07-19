@@ -1,4 +1,4 @@
-.work {
+.tools {
   height: 200vh;
   background: $offBlack;
   position: relative;
@@ -33,24 +33,19 @@
     color: $sandyYellow;
     font-family: $josefin;
     transform: translate(-50%, -50%);
-    &__how {
-      top: 24.5%;
-      left: 19.5%;
+    &__these {
+      top: 10%;
+      left: 10%;
       transform: rotateZ(-10deg);
     }
-    &__I {
-      top: 25%;
-      left: 70%;
-      transform: rotateZ(10deg);
-    }
-    &__do {
-      top: 60%;
-      left: 25%;
-      transform: rotateZ(10deg);
+    &__are {
+      top: 30%;
+      left: 40%;
+      transform: rotateZ(-10deg);
     }
     &__my {
-      top: 60%;
-      left: 55%;
+      top: 50%;
+      left: 70%;
       transform: rotateZ(-10deg);
     }
   }
@@ -58,59 +53,69 @@
     position: absolute;
     z-index: 12;
     transform: translate(-50%, -50%);
-    &__W {
+    &__T {
       top: 35%;
       left: -80%;
-      animation: 1s work__letter__W ease-out forwards;
+      animation: 1s tools__letter__T ease-out forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--workScroll) * -1s);
+      animation-delay: calc(var(--toolsScroll) * -1s);
     }
     &__O {
       color: transparent;
     }
-    &__R {
+    &__O2 {
       top: -30%;
-      left: 60%;
-      animation: 1s work__letter__R ease-out forwards;
+      left: 50%;
+      animation: 1s tools__letter__O2 ease-out forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--workScroll) * -1s);
+      animation-delay: calc(var(--toolsScroll) * -1s);
     }
-    &__K {
+    &__L {
+      top: 110%;
+      left: 70%;
+      animation: 1s tools__letter__L ease-out forwards;
+      animation-play-state: paused;
+      animation-delay: calc(var(--toolsScroll) * -1s);
+    }
+    &__S {
       top: 35%;
       left: 115%;
-      animation: 1s work__letter__K ease-out forwards;
+      animation: 1s tools__letter__S ease-out forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--workScroll) * -1s);
+      animation-delay: calc(var(--toolsScroll) * -1s);
     }
   }
   &__circle {
-    border-radius: 50%;
+    border-radius: 46% 46% 46% 46% / 46% 46% 46% 46% ;
     position: absolute;
-    top: 34.8%;
-    left: 41%;
+    top: 34.5%;
+    left: 30%;
     transform: translate(-50%, -50%);
     &__1 {
       background-color: $sandyYellow;
-      animation: 1s work__circle__1 ease-in-out forwards;
+      animation: 1s tools__circle__1 ease-in-out forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--workScroll) * -1s);
+      animation-delay: calc(var(--toolsScroll) * -1s);
     }
     &__2 {
       background-color: $offBlack;
       transform: translateX(-50%) translateY(-50%);
-      animation: 1s work__circle__2 ease-in-out forwards;
+      animation: 1s tools__circle__2 ease-in-out forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--workScroll) * -1s);
+      animation-delay: calc(var(--toolsScroll) * -1s);
     }
     &__3 {
       background-color: $sandyYellow;
       transform: translateX(-50%) translateY(-50%);
-      animation: 1s work__circle__3 ease-in-out forwards;
+      animation: 1s tools__circle__3 ease-in-out forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--workScroll) * -1s);
+      animation-delay: calc(var(--toolsScroll) * -1s);
       border-radius: 45% 45% 45% 45% / 42% 42% 42% 42%;
     }
   }
+}
+.stack {
+
   &__tools {
     padding: 0;
     margin: 0;
@@ -124,9 +129,9 @@
     top: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    animation: 1s work__tools ease-out forwards;
+    animation: 1s tools__tools ease-out forwards;
     animation-play-state: paused;
-    animation-delay: calc(var(--workScroll) * -1s);
+    animation-delay: calc(var(--toolsScroll) * -1s);
   }
   &__tool {
     position: relative;

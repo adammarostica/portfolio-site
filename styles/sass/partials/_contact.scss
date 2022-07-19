@@ -40,7 +40,7 @@
     animation-delay: calc(var(--contactScroll) * -1s);
   }
   &__letter {
-    margin: -.3rem;
+    margin: -0.3rem;
     display: inline-block;
     &__C1 {
       transform: translateX(-50vw);
@@ -125,14 +125,15 @@
       flex-basis: 40%;
       text-align: center;
       text-decoration: none;
-      transition: transform .3s ease-out, color .3s ease-out;
+      transition: transform 0.3s ease-out, color 0.3s ease-out;
       i {
         font-size: clamp(1rem, 6vw, 3rem);
         margin-bottom: min(3vw, 1rem);
-        transition: .3s transform ease-out;
+        transition: 0.3s transform ease-out;
         transform-origin: bottom left;
       }
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         transform: scale(1.1);
         color: $sandyYellow;
         i {
@@ -141,4 +142,24 @@
       }
     }
   }
+}
+.dummy__mailbox__1 {
+  position: absolute;
+  width: 10vmin;
+  top: 0;
+  left: 130%;
+  transform: skewX(20deg);
+  animation: 1s dummy__mailbox__1 ease-out forwards;
+  animation-play-state: paused;
+  animation-delay: calc(var(--toolsScroll) * -0.45s);
+}
+.dummy__mailbox__2 {
+  position: absolute;
+  top: 20%;
+  left: -30%;
+  width: 15vmin;
+  transform: skewX(-20deg);
+  animation: 1s dummy__mailbox__2 ease-out forwards;
+  animation-play-state: paused;
+  animation-delay: calc(var(--contactScroll) * -1s);
 }
