@@ -100,7 +100,13 @@
                 <span class="about__span about__span__T">T</span>
               </h2>
               <img
-                src="./assets/adam-profile5.png"
+                srcset="
+                  ./assets/adam-profile-1200.jpg 1200w,
+                  ./assets/adam-profile-1000.jpg 1000w,
+                  ./assets/adam-profile-800.jpg   800w,
+                  ./assets/adam-profile-600.jpg   600w
+                "
+                src="./assets/adam-profile-1200.jpg"
                 alt="A photo of Adam's profile"
                 class="about__image"
                 loading="lazy"
@@ -136,103 +142,62 @@
               <div class="project__img">
                 <img
                   class="project__img__mockup project__img__mockup__1"
-                  src="./assets/bar-cart-iphone.png"
+                  srcset="
+                    ./assets/projects/barcart-desktop-1119.png 1119w,
+                    ./assets/projects/barcart-desktop-1000.png 1000w,
+                    ./assets/projects/barcart-desktop-800.png   800w,
+                    ./assets/projects/barcart-mobile-600.png    600w
+                  "
+                  src="./assets/bar-cart-mobile-400.png"
                   alt="An image of a cocktail recipe app displayed on an iPhone"
-                  loading="lazy"
-                />
-                <img
-                  class="project__img__shadow project__img__shadow__1"
-                  src="./assets/bar-cart-iphone-shadow.png"
-                  alt="A blurry yellow shape that acts as a shadow for the preceding image"
                   loading="lazy"
                 />
               </div>
               <div class="project__text project__text__1">
-                <p>
+                <h3 class="project__text__heading">Bar Cart</h3>
+                <p class="project__text__description">
                   Use Bar Cart to search for cocktail recipes by name or
                   ingredient and see each recipe displayed on an attractive,
                   rotating 3D card.
                 </p>
-                <div class="project__links">
-                  <a href="https://mkdirinc.github.io/projectBarCart/">Live</a>
-                  <a href="https://github.com/mkDirInc/projectBarCart">Repo</a>
-                </div>
               </div>
-            </div>
-            <div class="project">
-              <div class="project__text project__text__2">
-                <p>A pixel perfect rendition of a multi-page website</p>
-                <div class="project__links">
-                  <a href="https://barone.adammarostica.com">Live</a>
-                  <a
-                    href="https://github.com/adammarostica/adam-marostica-project-one"
-                    >Repo</a
-                  >
-                </div>
+              <div class="project__stack">
+                <p class="project__stack__built">Built with:</p>
+                <ul class="project__stack__list">
+                  <li class="project__tool">
+                    <i class="devicon-html5-plain"></i>
+                    <p>HTML5</p>
+                  </li>
+                  <li class="project__tool">
+                    <i class="devicon-css3-plain"></i>
+                    <p>CSS3</p>
+                  </li>
+                  <li class="project__tool">
+                    <i class="devicon-javascript-plain"></i>
+                    <p>JavaScript</p>
+                  </li>
+                  <li class="project__tool">
+                    <i class="devicon-git-plain"></i>
+                    <p>Git</p>
+                  </li>
+                  <li class="project__tool">
+                    <i class="devicon-sass-original"></i>
+                    <p>Sass</p>
+                  </li>
+                </ul>
               </div>
-              <div class="project__img">
-                <img
-                  class="project__img__mockup project__img__mockup__2"
-                  src="./assets/bar-one-laptop.png"
-                  alt="An image of a cocktail recipe app displayed on an iPhone"
-                  loading="lazy"
-                />
-                <img
-                  class="project__img__shadow project__img__shadow__2"
-                  src="./assets/bar-one-laptop-shadow.png"
-                  alt="A blurry yellow shape that acts as a shadow for the preceding image"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-            <div class="project">
-              <div class="project__img">
-                <img
-                  class="project__img__mockup project__img__mockup__3"
-                  src="./assets/bar-cart-iphone.png"
-                  alt="An image of a cocktail recipe app displayed on an iPhone"
-                  loading="lazy"
-                />
-                <img
-                  class="project__img__shadow project__img__shadow__3"
-                  src="./assets/bar-cart-iphone-shadow.png"
-                  alt="A blurry yellow shape that acts as a shadow for the preceding image"
-                  loading="lazy"
-                />
-              </div>
-              <div class="project__text project__text__3">
-                <p>
-                  Use Bar Cart to search for cocktail recipes by name or
-                  ingredient and see each recipe displayed on an attractive,
-                  rotating 3D card.
-                </p>
-                <div class="project__links">
-                  <a>Live</a>
-                  <a>Repo</a>
-                </div>
-              </div>
-            </div>
-            <div class="project">
-              <div class="project__text project__text__4">
-                <p>A pixel perfect rendition of a multi-page website</p>
-                <div class="project__links">
-                  <a>Live</a>
-                  <a>Repo</a>
-                </div>
-              </div>
-              <div class="project__img">
-                <img
-                  class="project__img__mockup project__img__mockup__4"
-                  src="./assets/bar-one-laptop.png"
-                  alt="An image of a cocktail recipe app displayed on an iPhone"
-                  loading="lazy"
-                />
-                <img
-                  class="project__img__shadow project__img__shadow__4"
-                  src="./assets/bar-one-laptop-shadow.png"
-                  alt="A blurry yellow shape that acts as a shadow for the preceding image"
-                  loading="lazy"
-                />
+              <div class="project__links">
+                <a
+                  class="project__link"
+                  href="https://mkdirinc.github.io/projectBarCart/"
+                  >Live</a
+                >
+                <p class="project__links__divider">|</p>
+                <a
+                  class="project__link"
+                  href="https://github.com/mkDirInc/projectBarCart"
+                  >Repo</a
+                >
               </div>
             </div>
           </div>
