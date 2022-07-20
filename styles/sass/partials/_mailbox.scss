@@ -138,7 +138,8 @@
   left: 45%;
   font-size: 5em;
   transform: translate(-50%) rotateY(-20deg);
-  color: #333;
+  color: #eee;
+  text-shadow: .02em .02em $offBlack;
 }
 
 .contact__info:hover + .contact__img > .mailbox > .mailbox__door,
@@ -153,7 +154,7 @@
 
 .contact__info:hover + .contact__img > .mailbox > .mailbox__door::after,
 .mailbox.open .mailbox__door::after {
-  box-shadow: none;
+  box-shadow: 0em 0em 0em transparent;
 }
 
 .contact__info:hover + .contact__img > .mailbox > .mailbox__door p,

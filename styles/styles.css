@@ -2765,7 +2765,8 @@ footer {
   font-size: 5em;
   -webkit-transform: translate(-50%) rotateY(-20deg);
           transform: translate(-50%) rotateY(-20deg);
-  color: #333;
+  color: #eee;
+  text-shadow: 0.02em 0.02em #292a32;
 }
 
 .contact__info:hover + .contact__img > .mailbox > .mailbox__door,
@@ -2780,8 +2781,8 @@ footer {
 
 .contact__info:hover + .contact__img > .mailbox > .mailbox__door::after,
 .mailbox.open .mailbox__door::after {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: 0em 0em 0em transparent;
+          box-shadow: 0em 0em 0em transparent;
 }
 
 .contact__info:hover + .contact__img > .mailbox > .mailbox__door p,
