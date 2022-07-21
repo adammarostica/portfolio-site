@@ -1,129 +1,71 @@
 .projects {
   background-color: $offBlack;
   color: $offWhite;
-  overflow: hidden;
-  h2 {
-    text-align: center;
-    font-family: $bowlby;
-    font-size: clamp(2rem, 8vw, 5rem);
-    color: $sandyYellow;
-    letter-spacing: .3rem;
-    margin-bottom: 5rem;
-  }
   .wrapper {
     width: 85%;
     max-width: 1080px;
   }
+  &__heading {
+    margin: 3rem auto;
+    text-align: center;
+    font-family: $bowlby;
+    font-size: clamp(2rem, 8vw, 5rem);
+    color: $sandyYellow;
+    letter-spacing: 0.3rem;
+  }
 }
 
 .project {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 5rem;
+  margin: 4rem 0;
+  &__img {
+    // max-width: 800px;
+    margin-bottom: 1rem;
+  }
   &__text {
+    width: 90%;
+    margin: 0 auto;
+    &__heading {
+      font-size: clamp(1.2rem, 5vw, 2rem);
+      font-family: $bowlby;
+      color: $sandyYellow;
+      letter-spacing: 0.05rem;
+    }
+    &__description {
+      margin: .7rem 0;
+      font-size: clamp(0.8rem, 2vw, 1rem);
+    }
+  }
+  &__stack {
     display: flex;
-    flex-direction: column;
-    &__1 {
-      animation: 1s project__text__1 ease-out forwards;
-      animation-play-state: paused;
-      animation-delay: calc(var(--aboutScroll) * -.7s);
-    }
-    &__2 {
-      animation: 1s project__text__2 ease-out forwards;
-      animation-play-state: paused;
-      animation-delay: calc(var(--aboutScroll) * -.7s);
-    }
-    &__3 {
-      transform: translateX(20vw);
-      filter: blur(3px);
-      opacity: 0;
-      animation: 1s project__text__3 ease-in forwards;
-      animation-play-state: paused;
-      animation-delay: calc(var(--projectsScroll) * -.8s);
-    }
-    &__4 {
-      transform: translateX(20vw);
-      filter: blur(3px);
-      opacity: 0;
-      animation: 1s project__text__4 ease-in forwards;
-      animation-play-state: paused;
-      animation-delay: calc(var(--projectsScroll) * -.8s);
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+    &__list {
+      display: flex;
+      gap: 0.5rem;
     }
   }
   &__links {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: .7rem;
-    a {
-      padding: .3rem .5rem .2rem;
-      border-radius: 5px;
-      background-color: $sandyYellow;
-      color: $offBlack;
-      cursor: pointer;
-    }
+    gap: 0.5rem;
   }
-  &__img {
+  &__link {
     position: relative;
-    height: 100%;
-    width: 35%;
-    &__mockup {
-      position: relative;
-      z-index: 21;
-      &__1 {
-        animation: 1s project__1 ease-out forwards;
-        animation-play-state: paused;
-        animation-delay: calc(var(--aboutScroll) * -.7s);
-      }
-      &__2 {
-        animation: 1s project__2 ease-out forwards;
-        animation-play-state: paused;
-        animation-delay: calc(var(--aboutScroll) * -.7s);
-      }
-      &__3 {
-        transform: translateX(-50vw);
-        animation: 1s project__3 ease-in forwards;
-        animation-play-state: paused;
-        animation-delay: calc(var(--projectsScroll) * -.8s);  
-      }
-      &__4 {
-        transform: translateX(50vw);
-        animation: 1s project__4 ease-in forwards;
-        animation-play-state: paused;
-        animation-delay: calc(var(--projectsScroll) * -.8s);  
-      }
-    }
-    &__shadow {
+    color: $sandierYellow;
+    &::after {
+      content: "";
       position: absolute;
-      z-index: 20;
-      filter: blur(3px);
-      &__1 {
-        transform: translateX(-50vw) translateY(-94%);
-        animation: 1s project__shadow__1 ease-out forwards;
-        animation-play-state: paused;
-        animation-delay: calc(var(--aboutScroll) * -.7s);
-      }
-      &__2 {
-        transform: translateX(50vw) translateY(-97%);
-        animation: 1s project__shadow__2 ease-out forwards;
-        animation-play-state: paused;
-        animation-delay: calc(var(--aboutScroll) * -.7s);
-      }
-      &__3 {
-        transform: translateX(-50vw) translateY(-94%);
-        animation: 1s project__shadow__3 ease-in forwards;
-        animation-play-state: paused;
-        animation-delay: calc(var(--projectsScroll) * -.8s);
-      }
-      &__4 {
-        transform: translateX(50vw) translateY(-97%);
-        animation: 1s project__shadow__4 ease-in forwards;
-        animation-play-state: paused;
-        animation-delay: calc(var(--projectsScroll) * -.8s);
-      }
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: $sandierYellow;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
     }
-  }
-  &__text {
-    flex-basis: 60%;
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
   }
 }

@@ -144,12 +144,12 @@
 
 .contact__info:hover + .contact__img > .mailbox > .mailbox__door,
 .mailbox.open .mailbox__door {
-  height: 5%;
+  height: 6%;
   width: 50%;
   background-color: #ed5565;
   border-radius: 100vmax 0 0 100vmax;
-  outline: 3px solid #ed5565;
-  bottom: 39.5%;
+  outline: 3px solid transparent;
+  bottom: 38%;
 }
 
 .contact__info:hover + .contact__img > .mailbox > .mailbox__door::after,

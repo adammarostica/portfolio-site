@@ -90,7 +90,28 @@
       align-self: center;
     }
   }
-  .works {
+  .projects {
+    .wrapper {
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+    }
+    &__heading {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+  .project {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    flex-basis: 40%;
+    align-items: center;
+    margin: 0 auto 3rem;
+  }
+  .stack {
     &__tool {
       flex-basis: 20%;
       &__python {
