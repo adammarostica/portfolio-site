@@ -100,7 +100,13 @@
                 <span class="about__span about__span__T">T</span>
               </h2>
               <img
-                src="./assets/adam-profile5.png"
+                srcset="
+                  ./assets/adam-profile-1200.jpg 1200w,
+                  ./assets/adam-profile-1000.jpg 1000w,
+                  ./assets/adam-profile-800.jpg   800w,
+                  ./assets/adam-profile-600.jpg   600w
+                "
+                src="./assets/adam-profile-1200.jpg"
                 alt="A photo of Adam's profile"
                 class="about__image"
                 loading="lazy"
@@ -130,109 +136,241 @@
       </section>
       <section class="projects" id="projectsIntersection">
         <div class="projects__container" id="projects">
+          <h2 class="projects__heading">PROJECTS</h2>
           <div class="wrapper">
-            <h2>PROJECTS</h2>
             <div class="project">
               <div class="project__img">
                 <img
-                  class="project__img__mockup project__img__mockup__1"
-                  src="./assets/bar-cart-iphone.png"
-                  alt="An image of a cocktail recipe app displayed on an iPhone"
-                  loading="lazy"
-                />
-                <img
-                  class="project__img__shadow project__img__shadow__1"
-                  src="./assets/bar-cart-iphone-shadow.png"
-                  alt="A blurry yellow shape that acts as a shadow for the preceding image"
+                  class="project__mockup"
+                  srcset="
+                    ./assets/projects/walky-desktop-1109.png 1109w,
+                    ./assets/projects/walky-desktop-1000.png 1000w,
+                    ./assets/projects/walky-desktop-800.png   800w,
+                    ./assets/projects/walky-mobile-600.png    600w
+                  "
+                  src="./assets/walky-mobile-400.png"
+                  alt="An image of a podcast planner app displayed on a device screen"
                   loading="lazy"
                 />
               </div>
-              <div class="project__text project__text__1">
-                <p>
-                  Use Bar Cart to search for cocktail recipes by name or
-                  ingredient and see each recipe displayed on an attractive,
-                  rotating 3D card.
+              <div class="project__text">
+                <h3 class="project__text__heading">Walky Talky</h3>
+                <p class="project__text__description">
+                  Looking to fill the next few hours with podcasts? Walky Talky uses custom React hooks, the Listen Notes API, and a recursive algorithm to offer you a podcast playlist that suits your interests and lasts just as long as you need it to. You can even re-order your playlists, save them for later consumption, and listen to them in a custom audio player.
                 </p>
-                <div class="project__links">
-                  <a href="https://mkdirinc.github.io/projectBarCart/">Live</a>
-                  <a href="https://github.com/mkDirInc/projectBarCart">Repo</a>
+                <div class="project__stack">
+                  <p class="project__stack__built">Built with:</p>
+                  <ul class="project__stack__list">
+                    <li class="project__tool" title="React">
+                      <i aria-hidden="true" class="devicon-react-original"></i>
+                      <p class="sr-only">React</p>
+                    </li>
+                    <li class="project__tool" title="Firebase">
+                      <i aria-hidden="true" class="devicon-firebase-plain"></i>
+                      <p class="sr-only">Firebase</p>
+                    </li>
+                    <li class="project__tool" title="Rest API">
+                      <i aria-hidden="true" class="fa-solid fa-cloud-meatball"></i>
+                      <p class="sr-only">Rest API</p>
+                    </li>
+                    <li class="project__tool" title="CSS3">
+                      <i aria-hidden="true" class="devicon-css3-plain"></i>
+                      <p class="sr-only">CSS3</p>
+                    </li>
+                    <li class="project__tool" title="Git">
+                      <i aria-hidden="true" class="devicon-git-plain"></i>
+                      <p class="sr-only">Git</p>
+                    </li>
+                  </ul>
                 </div>
-              </div>
-            </div>
-            <div class="project">
-              <div class="project__text project__text__2">
-                <p>A pixel perfect rendition of a multi-page website</p>
                 <div class="project__links">
-                  <a href="https://barone.adammarostica.com">Live</a>
                   <a
-                    href="https://github.com/adammarostica/adam-marostica-project-one"
+                    class="project__link"
+                    href="https://walkytalky.netlify.app"
+                    >Live</a
+                  >
+                  <p class="project__links__divider">|</p>
+                  <a
+                    class="project__link"
+                    href="https://github.com/talkie-walkie/walky-talky"
                     >Repo</a
                   >
                 </div>
               </div>
+            </div>
+            <div class="project">
               <div class="project__img">
                 <img
-                  class="project__img__mockup project__img__mockup__2"
-                  src="./assets/bar-one-laptop.png"
+                  class="project__mockup"
+                  srcset="
+                    ./assets/projects/poll-desktop-1133.png 1133w,
+                    ./assets/projects/poll-desktop-1000.png 1000w,
+                    ./assets/projects/poll-desktop-800.png   800w,
+                    ./assets/projects/poll-mobile-600.png    600w
+                  "
+                  src="./assets/poll-mobile-400.png"
                   alt="An image of a cocktail recipe app displayed on an iPhone"
                   loading="lazy"
                 />
-                <img
-                  class="project__img__shadow project__img__shadow__2"
-                  src="./assets/bar-one-laptop-shadow.png"
-                  alt="A blurry yellow shape that acts as a shadow for the preceding image"
-                  loading="lazy"
-                />
+              </div>
+              <div class="project__text">
+                <h3 class="project__text__heading">Poll in the Wall</h3>
+                <p class="project__text__description">
+                  Create polls for others to vote on using this stylish and responsive app built with React, React Router, Firebase, and Local Storage. Users can specify a custom path where they would like others to find their poll, and once the user has voted, the app marks their browser so they only see the results if they visit the poll again.
+                </p>
+                <div class="project__stack">
+                  <p class="project__stack__built">Built with:</p>
+                  <ul class="project__stack__list">
+                    <li class="project__tool" title="React">
+                      <i aria-hidden="true" class="devicon-react-original"></i>
+                      <p class="sr-only">React</p>
+                    </li>
+                    <li class="project__tool" title="Firebase">
+                      <i aria-hidden="true" class="devicon-firebase-plain"></i>
+                      <p class="sr-only">Firebase</p>
+                    </li>
+                    <li class="project__tool" title="Git">
+                      <i aria-hidden="true" class="devicon-git-plain"></i>
+                      <p class="sr-only">Git</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="project__links">
+                  <a
+                    class="project__link"
+                    href="https://pollinthewall.adammarostica.com"
+                    >Live</a
+                  >
+                  <p class="project__links__divider">|</p>
+                  <a
+                    class="project__link"
+                    href="https://github.com/adammarostica/adam-marostica-project-three"
+                    >Repo</a
+                  >
+                </div>
               </div>
             </div>
             <div class="project">
               <div class="project__img">
                 <img
-                  class="project__img__mockup project__img__mockup__3"
-                  src="./assets/bar-cart-iphone.png"
+                  class="project__mockup"
+                  srcset="
+                    ./assets/projects/barcart-desktop-1119.png 1119w,
+                    ./assets/projects/barcart-desktop-1000.png 1000w,
+                    ./assets/projects/barcart-desktop-800.png   800w,
+                    ./assets/projects/barcart-mobile-600.png    600w
+                  "
+                  src="./assets/bar-cart-mobile-400.png"
                   alt="An image of a cocktail recipe app displayed on an iPhone"
                   loading="lazy"
                 />
-                <img
-                  class="project__img__shadow project__img__shadow__3"
-                  src="./assets/bar-cart-iphone-shadow.png"
-                  alt="A blurry yellow shape that acts as a shadow for the preceding image"
-                  loading="lazy"
-                />
               </div>
-              <div class="project__text project__text__3">
-                <p>
+              <div class="project__text">
+                <h3 class="project__text__heading">Bar Cart</h3>
+                <p class="project__text__description">
                   Use Bar Cart to search for cocktail recipes by name or
                   ingredient and see each recipe displayed on an attractive,
-                  rotating 3D card.
+                  rotating 3D card. Fun fact: this is the project I used to
+                  teach myself BEM (and I love it).
                 </p>
+                <div class="project__stack">
+                  <p class="project__stack__built">Built with:</p>
+                  <ul class="project__stack__list">
+                    <li class="project__tool" title="HTML5">
+                      <i aria-hidden="true" class="devicon-html5-plain"></i>
+                      <p class="sr-only">HTML5</p>
+                    </li>
+                    <li class="project__tool" title="CSS3">
+                      <i aria-hidden="true" class="devicon-css3-plain"></i>
+                      <p class="sr-only">CSS3</p>
+                    </li>
+                    <li class="project__tool" title="JavaScript">
+                      <i aria-hidden="true" class="devicon-javascript-plain"></i>
+                      <p class="sr-only">JavaScript</p>
+                    </li>
+                    <li class="project__tool" title="Git">
+                      <i aria-hidden="true" class="devicon-git-plain"></i>
+                      <p class="sr-only">Git</p>
+                    </li>
+                    <li class="project__tool" title="Sass">
+                      <i aria-hidden="true" class="devicon-sass-original"></i>
+                      <p class="sr-only">Sass</p>
+                    </li>
+                  </ul>
+                </div>
                 <div class="project__links">
-                  <a>Live</a>
-                  <a>Repo</a>
+                  <a
+                    class="project__link"
+                    href="https://mkdirinc.github.io/projectBarCart/"
+                    >Live</a
+                  >
+                  <p class="project__links__divider">|</p>
+                  <a
+                    class="project__link"
+                    href="https://github.com/mkDirInc/projectBarCart"
+                    >Repo</a
+                  >
                 </div>
               </div>
             </div>
             <div class="project">
-              <div class="project__text project__text__4">
-                <p>A pixel perfect rendition of a multi-page website</p>
-                <div class="project__links">
-                  <a>Live</a>
-                  <a>Repo</a>
-                </div>
-              </div>
               <div class="project__img">
                 <img
-                  class="project__img__mockup project__img__mockup__4"
-                  src="./assets/bar-one-laptop.png"
+                  class="project__mockup"
+                  srcset="
+                    ./assets/projects/barone-desktop-1106.png 1106w,
+                    ./assets/projects/barone-desktop-1000.png 1000w,
+                    ./assets/projects/barone-desktop-800.png   800w,
+                    ./assets/projects/barone-mobile-600.png    600w
+                  "
+                  src="./assets/barone-mobile-400.png"
                   alt="An image of a cocktail recipe app displayed on an iPhone"
                   loading="lazy"
                 />
-                <img
-                  class="project__img__shadow project__img__shadow__4"
-                  src="./assets/bar-one-laptop-shadow.png"
-                  alt="A blurry yellow shape that acts as a shadow for the preceding image"
-                  loading="lazy"
-                />
+              </div>
+              <div class="project__text">
+                <h3 class="project__text__heading">Bar One</h3>
+                <p class="project__text__description">
+                  A pixel perfect reconstruction of a provided brief. Visit it on mobile to see your new favourite burger menu.
+                </p>
+                <div class="project__stack">
+                  <p class="project__stack__built">Built with:</p>
+                  <ul class="project__stack__list">
+                    <li class="project__tool" title="HTML5">
+                      <i class="devicon-html5-plain"></i>
+                      <p class="sr-only">HTML5</p>
+                    </li>
+                    <li class="project__tool" title="CSS3">
+                      <i class="devicon-css3-plain"></i>
+                      <p class="sr-only">CSS3</p>
+                    </li>
+                    <li class="project__tool" title="JavaScript">
+                      <i class="devicon-javascript-plain"></i>
+                      <p class="sr-only">JavaScript</p>
+                    </li>
+                    <li class="project__tool" title="Git">
+                      <i class="devicon-git-plain"></i>
+                      <p class="sr-only">Git</p>
+                    </li>
+                    <li class="project__tool" title="Sass">
+                      <i class="devicon-sass-original"></i>
+                      <p class="sr-only">Sass</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="project__links">
+                  <a
+                    class="project__link"
+                    href="https://barone.adammarostica.com"
+                    >Live</a
+                  >
+                  <p class="project__links__divider">|</p>
+                  <a
+                    class="project__link"
+                    href="https://github.com/adammarostica/adam-marostica-project-one"
+                    >Repo</a
+                  >
+                </div>
               </div>
             </div>
           </div>
