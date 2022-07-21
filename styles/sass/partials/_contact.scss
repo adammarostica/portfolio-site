@@ -1,11 +1,11 @@
 .contact {
   position: relative;
   height: 250vh;
-  background-color: $sandyYellow;
+  background-color: $offBlack;
   text-align: center;
-  animation: 1s fade-to-black ease-out forwards;
-  animation-play-state: paused;
-  animation-delay: calc(var(--contactScroll) * -1s);
+  // animation: 1s fade-to-black ease-out forwards;
+  // animation-play-state: paused;
+  // animation-delay: calc(var(--contactScroll) * -1s);
   &__scroll {
     position: absolute;
     bottom: 0;
@@ -105,7 +105,7 @@
   }
   &__img {
     flex-basis: 40%;
-    transform: skewX(20deg) translateX(60vw);
+    transform: skewX(20deg) translateX(70vw);
     transform-origin: bottom center;
     animation: 1s mailbox ease-out forwards;
     animation-play-state: paused;
@@ -144,9 +144,38 @@
       }
     }
   }
+  &__background {
+    // position: absolute;
+    // z-index: -1;
+    // inset: 0 0 0 -30%;
+    // background: $sandyYellow;
+    // animation: 1s contact__background ease-in-out forwards;
+    // animation-play-state: paused;
+    // animation-delay: calc(var(--contactScroll) * -1s);
+    // &::before {
+    //   content: '';
+    //   left: 0;
+    //   position: absolute;
+    //   width: 100px;
+    //   height: 26.7%;
+    //   border-bottom-left-radius: 40px;
+    //   box-shadow: -40px 0 $offBlack;
+    // }
+    // &::after {
+    //   content: '';
+    //   left: 0;
+    //   top: 26.7%;
+    //   position: absolute;
+    //   width: 100px;
+    //   height: 25%;
+    //   border-top-left-radius: 40px;
+    //   box-shadow: -40px 0 $offBlack;
+    // }
+  }
 }
 .dummy__mailbox__1 {
   position: absolute;
+  z-index: 0;
   width: 10vmin;
   top: 0;
   left: 130%;
@@ -157,11 +186,25 @@
 }
 .dummy__mailbox__2 {
   position: absolute;
+  z-index: -1;
   top: 20%;
-  left: -30%;
-  width: 15vmin;
+  left: -50%;
+  width: 30vmin;
   transform: skewX(-20deg);
   animation: 1s dummy__mailbox__2 ease-out forwards;
   animation-play-state: paused;
   animation-delay: calc(var(--contactScroll) * -1s);
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -99;
+    top: -20vh;
+    left: 37%;
+    width: 170vmax;
+    height: 100vh;
+    background-color: $sandyYellow;
+    animation: 1s mailbox__string ease-out forwards;
+  animation-play-state: paused;
+  animation-delay: calc(var(--contactScroll) * -1s);
+  }
 }
