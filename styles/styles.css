@@ -674,42 +674,42 @@ a {
 }
 @-webkit-keyframes about__avatar {
   0%, 40% {
-    -webkit-transform: perspective(2000px) rotateX(-90deg);
-            transform: perspective(2000px) rotateX(-90deg);
+    -webkit-transform: rotateX(-90deg) skewX(20deg) translateZ(-10px);
+            transform: rotateX(-90deg) skewX(20deg) translateZ(-10px);
   }
   100% {
-    -webkit-transform: perspective(2000px) rotateX(0deg);
-            transform: perspective(2000px) rotateX(0deg);
+    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
+            transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
   }
 }
 @keyframes about__avatar {
   0%, 40% {
-    -webkit-transform: perspective(2000px) rotateX(-90deg);
-            transform: perspective(2000px) rotateX(-90deg);
+    -webkit-transform: rotateX(-90deg) skewX(20deg) translateZ(-10px);
+            transform: rotateX(-90deg) skewX(20deg) translateZ(-10px);
   }
   100% {
-    -webkit-transform: perspective(2000px) rotateX(0deg);
-            transform: perspective(2000px) rotateX(0deg);
+    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
+            transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
   }
 }
 @-webkit-keyframes about__image {
   0%, 85% {
-    -webkit-transform: perspective(2000px) rotateX(0deg);
-            transform: perspective(2000px) rotateX(0deg);
+    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
+            transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
   }
   100% {
-    -webkit-transform: perspective(2000px) rotateX(90deg);
-            transform: perspective(2000px) rotateX(90deg);
+    -webkit-transform: rotateX(90deg) skewX(-20deg) translateZ(-10px);
+            transform: rotateX(90deg) skewX(-20deg) translateZ(-10px);
   }
 }
 @keyframes about__image {
   0%, 85% {
-    -webkit-transform: perspective(2000px) rotateX(0deg);
-            transform: perspective(2000px) rotateX(0deg);
+    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
+            transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
   }
   100% {
-    -webkit-transform: perspective(2000px) rotateX(90deg);
-            transform: perspective(2000px) rotateX(90deg);
+    -webkit-transform: rotateX(90deg) skewX(-20deg) translateZ(-10px);
+            transform: rotateX(90deg) skewX(-20deg) translateZ(-10px);
   }
 }
 @-webkit-keyframes about__background {
@@ -774,8 +774,8 @@ a {
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     opacity: 0;
   }
 }
@@ -791,8 +791,8 @@ a {
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     opacity: 0;
   }
 }
@@ -1544,12 +1544,12 @@ header .wrapper {
       align-self: flex-end;
   color: hsl(296deg, 81%, 60%);
   z-index: 1;
-  -webkit-transform: perspective(1000px) rotateX(90deg);
-          transform: perspective(1000px) rotateX(90deg);
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-animation: 1s about__avatar 1s linear forwards;
-          animation: 1s about__avatar 1s linear forwards;
+  -webkit-animation: 1s about__avatar 1s ease-out forwards;
+          animation: 1s about__avatar 1s ease-out forwards;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
   -webkit-animation-delay: calc(var(--headerScroll) * -1s);
@@ -1559,8 +1559,8 @@ header .wrapper {
   position: relative;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-animation: 1s about__image 1s linear forwards;
-          animation: 1s about__image 1s linear forwards;
+  -webkit-animation: 1s about__image 1s ease-out forwards;
+          animation: 1s about__image 1s ease-out forwards;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
   -webkit-animation-delay: calc(var(--aboutScroll) * -0.7s);
