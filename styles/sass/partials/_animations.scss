@@ -136,7 +136,7 @@
   }
 
   100% {
-    transform: translateX(0) translateY(-160%) rotateZ(-60deg);
+    transform: translateX(0) translateY(-150%) rotateZ(-60deg);
   }
 }
 
@@ -188,28 +188,27 @@
   }
 }
 
-// Enter: rotate img div with header scroll
-@keyframes about__avatar {
-  0%, 40% {
-    transform: perspective(2000px) rotateX(-90deg);
-  }
-
-  100% {
-    transform: perspective(2000px) rotateX(0deg) ;
-  }
-}
-
-// Exit: rotate img itself with about scroll
 @keyframes about__image {
   0%, 85% {
-    transform: perspective(2000px)  rotateX(0deg);
+    transform: rotateX(0deg) translateZ(-1000px);
   }
 
   100% {
-    transform: perspective(2000px) rotateX(90deg);
+    transform: rotate(180deg) scale(0.1) translateZ(-1000px);
   }
 }
 
+@keyframes about__image__cover {
+  0%, 40% {
+    transform: translateX(0);
+  }
+  99% {
+    transform: translateX(100%)
+  }
+  100% {
+    transform: translateX(50vw);
+  }
+}
 
 @keyframes about__background {
   0%, 30% {
@@ -250,7 +249,7 @@
   }
 
   100% {
-    transform:   translateY(-50%);
+    transform: translateX(50%);
     opacity: 0;
   }
 }

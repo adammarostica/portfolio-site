@@ -18,7 +18,6 @@
 .project {
   margin: 4rem 0;
   &__img {
-    // max-width: 800px;
     margin-bottom: 1rem;
   }
   &__text {
@@ -32,7 +31,7 @@
     }
     &__description {
       margin: .7rem 0;
-      font-size: clamp(0.8rem, 2vw, 1rem);
+      font-size: 1rem;
     }
   }
   &__stack {

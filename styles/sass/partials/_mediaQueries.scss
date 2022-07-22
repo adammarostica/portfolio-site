@@ -33,6 +33,25 @@
       &__link {
         padding: 1rem min(1vw, 1rem);
       }
+      &__link {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          transform: scaleX(0);
+          height: 2px;
+          bottom: .7rem;
+          left: 0;
+          background-color: $offWhite;
+          transform-origin: bottom right;
+          transition: transform 0.25s ease-out;
+        }
+        &:hover::after {
+          transform: scaleX(1);
+          transform-origin: bottom left;
+        }
+      }
     }
   }
   .burger__menu {

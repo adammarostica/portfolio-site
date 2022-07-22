@@ -33,15 +33,6 @@ header {
     &__item {
       transition: transform .3s ease-out;
       margin: .3rem;
-      &:hover, &:focus {
-        transform: translateY(.2rem);
-      }
-    }
-    &__link {
-      transition: color .3s ease-out;
-      &:hover, &:focus {
-        color: $lightLilac;
-      }
     }
     &--visible {
       transform: translateY(-4rem) translateZ(1px);
