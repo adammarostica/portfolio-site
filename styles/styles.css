@@ -1625,6 +1625,7 @@ header .wrapper {
 .about__background {
   position: absolute;
   inset: 0;
+  z-index: -1;
   background-color: #3C2189;
   -webkit-animation: 1s about__background ease-in-out forwards;
           animation: 1s about__background ease-in-out forwards;

@@ -88,6 +88,7 @@
   &__background {
     position: absolute;
     inset: 0;
+    z-index: -1;
     background-color: $darkPurple;
     animation: 1s about__background ease-in-out forwards;
     animation-play-state: paused;
