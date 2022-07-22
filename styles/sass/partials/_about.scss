@@ -30,6 +30,7 @@
   }
   &__image {
     position: relative;
+    transform: translateZ(-1000px);
     animation: 1s about__image 1s ease-out forwards;
     animation-play-state: paused;
     animation-delay: calc(var(--aboutScroll) * -.7s);

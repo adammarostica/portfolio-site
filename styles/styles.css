@@ -1543,6 +1543,8 @@ header .wrapper {
 }
 .about__image {
   position: relative;
+  -webkit-transform: translateZ(-1000px);
+          transform: translateZ(-1000px);
   -webkit-animation: 1s about__image 1s ease-out forwards;
           animation: 1s about__image 1s ease-out forwards;
   -webkit-animation-play-state: paused;
