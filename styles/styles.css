@@ -674,42 +674,42 @@ a {
 }
 @-webkit-keyframes about__avatar {
   0%, 40% {
-    -webkit-transform: rotateX(-90deg) skewX(20deg) translateZ(-10px);
-            transform: rotateX(-90deg) skewX(20deg) translateZ(-10px);
+    -webkit-transform: rotateX(-90deg) skewX(20deg) translateZ(-1000px);
+            transform: rotateX(-90deg) skewX(20deg) translateZ(-1000px);
   }
   100% {
-    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
-            transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
+    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
+            transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
   }
 }
 @keyframes about__avatar {
   0%, 40% {
-    -webkit-transform: rotateX(-90deg) skewX(20deg) translateZ(-10px);
-            transform: rotateX(-90deg) skewX(20deg) translateZ(-10px);
+    -webkit-transform: rotateX(-90deg) skewX(20deg) translateZ(-1000px);
+            transform: rotateX(-90deg) skewX(20deg) translateZ(-1000px);
   }
   100% {
-    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
-            transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
+    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
+            transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
   }
 }
 @-webkit-keyframes about__image {
   0%, 85% {
-    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
-            transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
+    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
+            transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
   }
   100% {
-    -webkit-transform: rotateX(90deg) skewX(-20deg) translateZ(-10px);
-            transform: rotateX(90deg) skewX(-20deg) translateZ(-10px);
+    -webkit-transform: rotateX(90deg) skewX(-20deg) translateZ(-1000px);
+            transform: rotateX(90deg) skewX(-20deg) translateZ(-1000px);
   }
 }
 @keyframes about__image {
   0%, 85% {
-    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
-            transform: rotateX(0deg) skewX(0deg) translateZ(-10px);
+    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
+            transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
   }
   100% {
-    -webkit-transform: rotateX(90deg) skewX(-20deg) translateZ(-10px);
-            transform: rotateX(90deg) skewX(-20deg) translateZ(-10px);
+    -webkit-transform: rotateX(90deg) skewX(-20deg) translateZ(-1000px);
+            transform: rotateX(90deg) skewX(-20deg) translateZ(-1000px);
   }
 }
 @-webkit-keyframes about__background {
