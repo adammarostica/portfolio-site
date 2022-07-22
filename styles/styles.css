@@ -702,8 +702,8 @@ a {
             transform: translateX(100%);
   }
   100% {
-    -webkit-transform: translateX(50vw);
-            transform: translateX(50vw);
+    -webkit-transform: translateX(200vw);
+            transform: translateX(200vw);
   }
 }
 @keyframes about__image__cover {
@@ -716,8 +716,8 @@ a {
             transform: translateX(100%);
   }
   100% {
-    -webkit-transform: translateX(50vw);
-            transform: translateX(50vw);
+    -webkit-transform: translateX(200vw);
+            transform: translateX(200vw);
   }
 }
 @-webkit-keyframes about__background {
@@ -1551,6 +1551,20 @@ header .wrapper {
           animation-play-state: paused;
   -webkit-animation-delay: calc(var(--aboutScroll) * -0.7s);
           animation-delay: calc(var(--aboutScroll) * -0.7s);
+}
+.about__image__cover {
+  z-index: 2;
+  position: absolute;
+  inset: 0;
+  background-color: #3C2189;
+  width: 101%;
+  height: 101%;
+  -webkit-animation: 1s about__image__cover 1s ease-out forwards;
+          animation: 1s about__image__cover 1s ease-out forwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: calc(var(--headerScroll) * -1s);
+          animation-delay: calc(var(--headerScroll) * -1s);
 }
 .about__span {
   font-family: "Bowlby One", cursive;
