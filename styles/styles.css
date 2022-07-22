@@ -674,42 +674,42 @@ a {
 }
 @-webkit-keyframes about__avatar {
   0%, 40% {
-    -webkit-transform: perspective(1000px) rotateX(-90deg);
-            transform: perspective(1000px) rotateX(-90deg);
+    -webkit-transform: perspective(1000px) rotateX(-90deg) translateZ(1000px);
+            transform: perspective(1000px) rotateX(-90deg) translateZ(1000px);
   }
   100% {
-    -webkit-transform: perspective(1000px) rotateX(0deg);
-            transform: perspective(1000px) rotateX(0deg);
+    -webkit-transform: perspective(1000px) rotateX(0deg) translateZ(1000px);
+            transform: perspective(1000px) rotateX(0deg) translateZ(1000px);
   }
 }
 @keyframes about__avatar {
   0%, 40% {
-    -webkit-transform: perspective(1000px) rotateX(-90deg);
-            transform: perspective(1000px) rotateX(-90deg);
+    -webkit-transform: perspective(1000px) rotateX(-90deg) translateZ(1000px);
+            transform: perspective(1000px) rotateX(-90deg) translateZ(1000px);
   }
   100% {
-    -webkit-transform: perspective(1000px) rotateX(0deg);
-            transform: perspective(1000px) rotateX(0deg);
+    -webkit-transform: perspective(1000px) rotateX(0deg) translateZ(1000px);
+            transform: perspective(1000px) rotateX(0deg) translateZ(1000px);
   }
 }
 @-webkit-keyframes about__image {
   0%, 85% {
-    -webkit-transform: perspective(1000px) rotateX(0deg);
-            transform: perspective(1000px) rotateX(0deg);
+    -webkit-transform: perspective(1000px) rotateX(0deg) translateZ(1000px);
+            transform: perspective(1000px) rotateX(0deg) translateZ(1000px);
   }
   100% {
-    -webkit-transform: perspective(1000px) rotateX(90deg);
-            transform: perspective(1000px) rotateX(90deg);
+    -webkit-transform: perspective(1000px) rotateX(90deg) translateZ(1000px);
+            transform: perspective(1000px) rotateX(90deg) translateZ(1000px);
   }
 }
 @keyframes about__image {
   0%, 85% {
-    -webkit-transform: perspective(1000px) rotateX(0deg);
-            transform: perspective(1000px) rotateX(0deg);
+    -webkit-transform: perspective(1000px) rotateX(0deg) translateZ(1000px);
+            transform: perspective(1000px) rotateX(0deg) translateZ(1000px);
   }
   100% {
-    -webkit-transform: perspective(1000px) rotateX(90deg);
-            transform: perspective(1000px) rotateX(90deg);
+    -webkit-transform: perspective(1000px) rotateX(90deg) translateZ(1000px);
+            transform: perspective(1000px) rotateX(90deg) translateZ(1000px);
   }
 }
 @-webkit-keyframes about__background {
