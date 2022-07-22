@@ -27,22 +27,18 @@
     width: 45%;
     align-self: flex-end;
     color: $steelPink;
-    @supports (-webkit-appearance:none) {
-      z-index: 0;
-      transform: rotateX(90deg);
-      animation: 1s about__avatar 1s ease-out forwards;
-      animation-play-state: paused;
-      animation-delay: calc(var(--headerScroll) * -1s);
-    }
+    z-index: 1;
+    transform: rotateX(90deg);
+    animation: 1s about__avatar 1s ease-out forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--headerScroll) * -1s);
   }
   &__image {
     position: relative;
-    @supports (-webkit-appearance:none) {
-      animation: 1s about__image 1s ease-out forwards;
-      animation-play-state: paused;
-      animation-delay: calc(var(--aboutScroll) * -.7s);
-      z-index: 0;
-    }
+    animation: 1s about__image 1s ease-out forwards;
+    animation-play-state: paused;
+    animation-delay: calc(var(--aboutScroll) * -.7s);
+    z-index: 0;
     // &__cover {
     //   inset: 0;
     //   background-image: linear-gradient($darkPurple, $darkPurple);
@@ -128,4 +124,9 @@
       margin-bottom: 1rem;
     }
   }
+}
+
+.selector:not(*:root) .about__avatar,
+.selector:not(*:root) .about__image {
+  animation: none;
 }

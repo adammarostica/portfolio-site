@@ -1543,33 +1543,25 @@ header .wrapper {
   -ms-flex-item-align: end;
       align-self: flex-end;
   color: hsl(296deg, 81%, 60%);
-}
-@supports (-webkit-appearance: none) {
-  .about__avatar {
-    z-index: 0;
-    -webkit-transform: rotateX(90deg);
-            transform: rotateX(90deg);
-    -webkit-animation: 1s about__avatar 1s ease-out forwards;
-            animation: 1s about__avatar 1s ease-out forwards;
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-    -webkit-animation-delay: calc(var(--headerScroll) * -1s);
-            animation-delay: calc(var(--headerScroll) * -1s);
-  }
+  z-index: 1;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  -webkit-animation: 1s about__avatar 1s ease-out forwards;
+          animation: 1s about__avatar 1s ease-out forwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: calc(var(--headerScroll) * -1s);
+          animation-delay: calc(var(--headerScroll) * -1s);
 }
 .about__image {
   position: relative;
-}
-@supports (-webkit-appearance: none) {
-  .about__image {
-    -webkit-animation: 1s about__image 1s ease-out forwards;
-            animation: 1s about__image 1s ease-out forwards;
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-    -webkit-animation-delay: calc(var(--aboutScroll) * -0.7s);
-            animation-delay: calc(var(--aboutScroll) * -0.7s);
-    z-index: 0;
-  }
+  -webkit-animation: 1s about__image 1s ease-out forwards;
+          animation: 1s about__image 1s ease-out forwards;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-delay: calc(var(--aboutScroll) * -0.7s);
+          animation-delay: calc(var(--aboutScroll) * -0.7s);
+  z-index: 0;
 }
 .about__span {
   font-family: "Bowlby One", cursive;
@@ -1666,6 +1658,12 @@ header .wrapper {
 }
 .about__text p:first-of-type {
   margin-bottom: 1rem;
+}
+
+.selector:not(*:root) .about__avatar,
+.selector:not(*:root) .about__image {
+  -webkit-animation: none;
+          animation: none;
 }
 
 .projects {
