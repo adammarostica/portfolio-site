@@ -28,26 +28,30 @@
     align-self: flex-end;
     color: $steelPink;
     z-index:1;
+    transform: perspective(1000px) rotateX(90deg);
+    animation: 1s about__avatar 1s ease-out forwards;
+      animation-play-state: paused;
+      animation-delay: calc(var(--headerScroll) * -1s);
   }
   &__image {
     position: relative;
     animation: 1s about__image 1s ease-out forwards;
     animation-play-state: paused;
-    animation-delay: calc(var(--aboutScroll) * -.8s);
+    animation-delay: calc(var(--aboutScroll) * -.7s);
     z-index: 0;
-    &__cover {
-      inset: 0;
-      background-image: linear-gradient($darkPurple, $darkPurple);
-      background-size: 100% 100%;
-      background-position: bottom;
-      background-repeat: no-repeat;
-      position: absolute;
-      width: 101%;
-      height: 101%;
-      animation: 1s about__image__cover 1s ease-out forwards;
-      animation-play-state: paused;
-      animation-delay: calc(var(--headerScroll) * -1s);
-    }
+    // &__cover {
+    //   inset: 0;
+    //   background-image: linear-gradient($darkPurple, $darkPurple);
+    //   background-size: 100% 100%;
+    //   background-position: bottom;
+    //   background-repeat: no-repeat;
+    //   position: absolute;
+    //   width: 101%;
+    //   height: 101%;
+    //   animation: 1s about__image__cover 1s ease-out forwards;
+    //   animation-play-state: paused;
+    //   animation-delay: calc(var(--headerScroll) * -1s);
+    // }
   }
   &__span {
     font-family: $bowlby;
@@ -63,7 +67,7 @@
       animation-delay: calc(var(--aboutScroll) * -.8s);
     }
     &__B {
-      --translateX: 30vw;
+      --translateX: 40vw;
       top: -9%;
       right: -7%;
       transform: translateX(var(--translateX));
@@ -95,7 +99,7 @@
       left: 40%;
       animation: 1s about__T ease-out forwards;
       animation-play-state: paused;
-      animation-delay: calc(var(--aboutScroll) * -.8s);
+      animation-delay: calc(var(--aboutScroll) * -.68s);
     }
   }
   &__background {
