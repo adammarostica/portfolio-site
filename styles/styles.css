@@ -674,42 +674,42 @@ a {
 }
 @-webkit-keyframes about__avatar {
   0%, 40% {
-    -webkit-transform: rotateX(-90deg) skewX(20deg) translateZ(-1000px);
-            transform: rotateX(-90deg) skewX(20deg) translateZ(-1000px);
+    -webkit-transform: perspective(2000px) rotateX(-90deg);
+            transform: perspective(2000px) rotateX(-90deg);
   }
   100% {
-    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
-            transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
+    -webkit-transform: perspective(2000px) rotateX(0deg);
+            transform: perspective(2000px) rotateX(0deg);
   }
 }
 @keyframes about__avatar {
   0%, 40% {
-    -webkit-transform: rotateX(-90deg) skewX(20deg) translateZ(-1000px);
-            transform: rotateX(-90deg) skewX(20deg) translateZ(-1000px);
+    -webkit-transform: perspective(2000px) rotateX(-90deg);
+            transform: perspective(2000px) rotateX(-90deg);
   }
   100% {
-    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
-            transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
+    -webkit-transform: perspective(2000px) rotateX(0deg);
+            transform: perspective(2000px) rotateX(0deg);
   }
 }
 @-webkit-keyframes about__image {
   0%, 85% {
-    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
-            transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
+    -webkit-transform: perspective(2000px) rotateX(0deg);
+            transform: perspective(2000px) rotateX(0deg);
   }
   100% {
-    -webkit-transform: rotateX(90deg) skewX(-20deg) translateZ(-1000px);
-            transform: rotateX(90deg) skewX(-20deg) translateZ(-1000px);
+    -webkit-transform: perspective(2000px) rotateX(90deg);
+            transform: perspective(2000px) rotateX(90deg);
   }
 }
 @keyframes about__image {
   0%, 85% {
-    -webkit-transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
-            transform: rotateX(0deg) skewX(0deg) translateZ(-1000px);
+    -webkit-transform: perspective(2000px) rotateX(0deg);
+            transform: perspective(2000px) rotateX(0deg);
   }
   100% {
-    -webkit-transform: rotateX(90deg) skewX(-20deg) translateZ(-1000px);
-            transform: rotateX(90deg) skewX(-20deg) translateZ(-1000px);
+    -webkit-transform: perspective(2000px) rotateX(90deg);
+            transform: perspective(2000px) rotateX(90deg);
   }
 }
 @-webkit-keyframes about__background {
@@ -1543,29 +1543,33 @@ header .wrapper {
   -ms-flex-item-align: end;
       align-self: flex-end;
   color: hsl(296deg, 81%, 60%);
-  z-index: 1;
-  -webkit-transform: rotateX(90deg);
-          transform: rotateX(90deg);
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-animation: 1s about__avatar 1s ease-out forwards;
-          animation: 1s about__avatar 1s ease-out forwards;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  -webkit-animation-delay: calc(var(--headerScroll) * -1s);
-          animation-delay: calc(var(--headerScroll) * -1s);
+}
+@supports (-webkit-appearance: none) {
+  .about__avatar {
+    z-index: 0;
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+    -webkit-animation: 1s about__avatar 1s ease-out forwards;
+            animation: 1s about__avatar 1s ease-out forwards;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+    -webkit-animation-delay: calc(var(--headerScroll) * -1s);
+            animation-delay: calc(var(--headerScroll) * -1s);
+  }
 }
 .about__image {
   position: relative;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-animation: 1s about__image 1s ease-out forwards;
-          animation: 1s about__image 1s ease-out forwards;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  -webkit-animation-delay: calc(var(--aboutScroll) * -0.7s);
-          animation-delay: calc(var(--aboutScroll) * -0.7s);
-  z-index: 0;
+}
+@supports (-webkit-appearance: none) {
+  .about__image {
+    -webkit-animation: 1s about__image 1s ease-out forwards;
+            animation: 1s about__image 1s ease-out forwards;
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+    -webkit-animation-delay: calc(var(--aboutScroll) * -0.7s);
+            animation-delay: calc(var(--aboutScroll) * -0.7s);
+    z-index: 0;
+  }
 }
 .about__span {
   font-family: "Bowlby One", cursive;
