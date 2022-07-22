@@ -1549,13 +1549,13 @@ header .wrapper {
           animation-play-state: paused;
   -webkit-animation-delay: calc(var(--aboutScroll) * -0.7s);
           animation-delay: calc(var(--aboutScroll) * -0.7s);
-  z-index: 0;
+  z-index: 1;
 }
 .about__span {
   font-family: "Bowlby One", cursive;
   font-size: clamp(1rem, 18vw, 8rem);
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 }
 .about__span__A {
   top: -25%;
