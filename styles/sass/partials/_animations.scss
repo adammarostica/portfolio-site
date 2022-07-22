@@ -200,13 +200,14 @@
 
 @keyframes about__image__cover {
   0%, 40% {
-    transform: translateX(0);
+    inset: 0;
   }
   99% {
-    transform: translateX(100%);
+    inset: 0 0 0 100%;
+
   }
   100% {
-    transform: translateX(200vw);
+    inset: 0 0 0 300%;
   }
 }
 
