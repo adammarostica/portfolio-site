@@ -191,22 +191,22 @@
 // Enter: rotate img div with header scroll
 @keyframes about__avatar {
   0%, 40% {
-    transform: perspective(1000px) rotateX(-90deg) translateZ(-1px);
+    transform: perspective(2000px) rotateX(-90deg);
   }
 
   100% {
-    transform: perspective(1000px) rotateX(0deg) translateZ(-1px);
+    transform: perspective(2000px) rotateX(0deg);
   }
 }
 
 // Exit: rotate img itself with about scroll
 @keyframes about__image {
   0%, 85% {
-    transform: perspective(1000px) rotateX(0deg) translateZ(-1px);
+    transform: perspective(2000px) rotateX(0deg);
   }
 
   100% {
-    transform: perspective(1000px) rotateX(90deg) translateZ(-1px);
+    transform: perspective(2000px) rotateX(90deg);
   }
 }
 
