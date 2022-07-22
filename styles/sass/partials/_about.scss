@@ -30,14 +30,14 @@
     z-index: 1;
     transform: perspective(1000px) rotateX(90deg);
     transform-style: preserve-3d;
-    animation: 1s about__avatar 1s ease-out forwards;
+    animation: 1s about__avatar 1s linear forwards;
     animation-play-state: paused;
     animation-delay: calc(var(--headerScroll) * -1s);
   }
   &__image {
     position: relative;
     transform-style: preserve-3d;
-    animation: 1s about__image 1s ease-out forwards;
+    animation: 1s about__image 1s linear forwards;
     animation-play-state: paused;
     animation-delay: calc(var(--aboutScroll) * -.7s);
     z-index: 0;

@@ -1548,8 +1548,8 @@ header .wrapper {
           transform: perspective(1000px) rotateX(90deg);
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-animation: 1s about__avatar 1s ease-out forwards;
-          animation: 1s about__avatar 1s ease-out forwards;
+  -webkit-animation: 1s about__avatar 1s linear forwards;
+          animation: 1s about__avatar 1s linear forwards;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
   -webkit-animation-delay: calc(var(--headerScroll) * -1s);
@@ -1559,8 +1559,8 @@ header .wrapper {
   position: relative;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  -webkit-animation: 1s about__image 1s ease-out forwards;
-          animation: 1s about__image 1s ease-out forwards;
+  -webkit-animation: 1s about__image 1s linear forwards;
+          animation: 1s about__image 1s linear forwards;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
   -webkit-animation-delay: calc(var(--aboutScroll) * -0.7s);
