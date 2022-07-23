@@ -36,17 +36,17 @@
     animation: 1s about__image 1s ease-out forwards;
     animation-play-state: paused;
     animation-delay: calc(var(--aboutScroll) * -.7s);
-    &__cover {
-      z-index: 2;
-      position: absolute;
-      inset: 0;
-      background-color: $darkPurple;
-      // width: 101%;
-      // height: 101%;
-      animation: 1s about__image__cover 1s ease-out forwards;
-    animation-play-state: paused;
-    animation-delay: calc(var(--headerScroll) * -1s);
-    }
+    // &__cover {
+    //   z-index: 2;
+    //   position: absolute;
+    //   inset: 0;
+    //   background-color: $darkPurple;
+    //   // width: 101%;
+    //   // height: 101%;
+    //   animation: 1s about__image__cover 1s ease-out forwards;
+    // animation-play-state: paused;
+    // animation-delay: calc(var(--headerScroll) * -1s);
+    // }
   }
   &__span {
     font-family: $bowlby;
