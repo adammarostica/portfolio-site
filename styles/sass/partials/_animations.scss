@@ -198,18 +198,6 @@
   }
 }
 
-@keyframes about__image__cover {
-  0%, 40% {
-    transform: translateX(0);
-  }
-  99% {
-    transform: translateX(100%)
-  }
-  100% {
-    transform: translateX(50vw);
-  }
-}
-
 @keyframes about__background {
   0%, 30% {
     inset: 0;

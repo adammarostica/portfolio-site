@@ -23,6 +23,7 @@
     justify-content: center;
   }
   &__avatar {
+    z-index: 1;
     position: relative;
     width: 45%;
     align-self: flex-end;
@@ -34,7 +35,7 @@
     animation: 1s about__image 1s ease-out forwards;
     animation-play-state: paused;
     animation-delay: calc(var(--aboutScroll) * -.7s);
-    z-index: 1;
+    z-index: 0;
   }
   &__span {
     font-family: $bowlby;
