@@ -700,7 +700,7 @@ a {
     inset: 0 0 0 100%;
   }
   100% {
-    inset: 0 0 0 300%;
+    inset: 0 0 0 100%;
   }
 }
 @keyframes about__image__cover {
@@ -711,7 +711,7 @@ a {
     inset: 0 0 0 100%;
   }
   100% {
-    inset: 0 0 0 300%;
+    inset: 0 0 0 100%;
   }
 }
 @-webkit-keyframes about__background {
@@ -1551,8 +1551,6 @@ header .wrapper {
   position: absolute;
   inset: 0;
   background-color: #3C2189;
-  width: 101%;
-  height: 101%;
   -webkit-animation: 1s about__image__cover 1s ease-out forwards;
           animation: 1s about__image__cover 1s ease-out forwards;
   -webkit-animation-play-state: paused;

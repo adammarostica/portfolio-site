@@ -111,14 +111,14 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, {});
 
-// Observes the entry of new sections into viewport
-[header, about, projects, tools, contact].forEach((section) => {
-  observer.observe(section);
-});
 
 
 window.addEventListener('load', () => {
   window.scrollTo(0, 0);
+  // Observes the entry of new sections into viewport
+  [header, about, projects, tools, contact].forEach((section) => {
+    observer.observe(section);
+  });
 });
 
 // Click to open mailbox
